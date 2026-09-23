@@ -1,0 +1,20 @@
+[transformers] `Siglip2ImageProcessorFast` is deprecated. The `Fast` suffix for image processors has been removed; use `Siglip2ImageProcessor` instead.
+D:\dev\ai-in-cr\LR01\.venv\Lib\site-packages\huggingface_hub\utils\_validators.py:208: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
+  warnings.warn(
+D:\dev\ai-in-cr\LR01\.venv\Lib\site-packages\diffusers\utils\deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]Loading pipeline components...:  20%|##        | 1/5 [00:00<00:00,  6.16it/s]
+Loading weights:   0%|          | 0/372 [00:00<?, ?it/s][A
+Loading weights:   3%|3         | 12/372 [00:00<00:05, 64.37it/s][A
+Loading weights:   5%|5         | 19/372 [00:00<00:07, 46.95it/s][A
+Loading weights:   8%|8         | 31/372 [00:00<00:05, 61.42it/s][A
+Loading weights:  71%|#######   | 264/372 [00:00<00:00, 689.27it/s][ALoading weights: 100%|##########| 372/372 [00:00<00:00, 589.75it/s]
+Loading pipeline components...:  80%|########  | 4/5 [00:01<00:00,  2.62it/s]Loading pipeline components...: 100%|##########| 5/5 [00:02<00:00,  1.71it/s]Loading pipeline components...: 100%|##########| 5/5 [00:02<00:00,  1.95it/s]
+You have disabled the safety checker for <class 'diffusers.pipelines.stable_diffusion.pipeline_stable_diffusion.StableDiffusionPipeline'> by passing `safety_checker=None`. Ensure that you abide to the conditions of the Stable Diffusion license and do not expose unfiltered results in services or applications open to the public. Both the diffusers team and Hugging Face strongly recommend to keep the safety filter enabled in all public facing circumstances, disabling it only for use-cases that involve analyzing network behavior or auditing its results. For more information, please have a look at https://github.com/huggingface/diffusers/pull/254 .
+Traceback (most recent call last):
+  File "D:\dev\ai-in-cr\LR01\src\run_cuda_error.py", line 188, in <module>
+    main()
+  File "D:\dev\ai-in-cr\LR01\src\run_cuda_error.py", line 104, in main
+    generator = torch.Generator(device="cuda").manual_seed(config["seed"])
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Cannot get CUDA generator without ATen_cuda library. PyTorch splits its backend into two shared libraries: a CPU library and a CUDA library; this error has occurred because you are trying to use some CUDA functionality, but the CUDA library has not been loaded by the dynamic linker for some reason.  The CUDA library MUST be loaded, EVEN IF you don't directly use any symbols from the CUDA library! One common culprit is a lack of -INCLUDE:?warp_size@cuda@at@@YAHXZ in your link arguments; many dynamic linkers will delete dynamic library dependencies if you don't depend on any of their symbols.  You can check if this has occurred by using link on your binary to see if there is a dependency on *_cuda.dll library.

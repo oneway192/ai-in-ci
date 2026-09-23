@@ -1,0 +1,9 @@
+{
+  "checked_utc": "2026-09-23T11:53:09.801324+00:00",
+  "run_001_sha256": "670eaba0e8962cd7924d4265ab22430c276e6c69d9a8d6923b574c26c823637d",
+  "run_002_sha256": "670eaba0e8962cd7924d4265ab22430c276e6c69d9a8d6923b574c26c823637d",
+  "exact_sha256_match": true,
+  "same_image_size": true,
+  "same_image_mode": true,
+  "interpretation": "PASS: два запуска в одной зафиксированной CPU-среде побитово совпали."
+}
