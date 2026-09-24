@@ -1,0 +1,28 @@
+{
+  "variant": 7,
+  "context": "paper",
+  "context_title": "бумажная текстура (подложка макета)",
+  "factor": "size",
+  "factor_title": "размер изображения ×1,5",
+  "hypothesis": "Увеличение размера изображения с 96×96 до 144×144 при неизменных остальных параметрах не приведёт к существенному изменению средней яркости, контраста, граничной энергии и энтропии относительно межseedового разброса.",
+  "base_seed": 101,
+  "n": 5,
+  "base_params": {
+    "size": 96,
+    "cell": 4,
+    "octaves": 3,
+    "persistence": 0.6,
+    "quantize": 8,
+    "interp": "smooth"
+  },
+  "perturbed_params": {
+    "size": 144,
+    "cell": 4,
+    "octaves": 3,
+    "persistence": 0.6,
+    "quantize": 8,
+    "interp": "smooth"
+  },
+  "significance_rule": "|Δ| > 2.0·s_base",
+  "practical_contrast_threshold": 0.15
+}
