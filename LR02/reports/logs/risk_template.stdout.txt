@@ -1,0 +1,1 @@
+шаблон записан: artifacts\risk_register.csv

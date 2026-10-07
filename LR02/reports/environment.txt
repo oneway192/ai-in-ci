@@ -1,0 +1,7 @@
+Python 3.12.0
+
+Интерпретатор: ..\LR01\.venv\Scripts\python.exe
+Команда: ..\LR01\.venv\Scripts\python.exe --version
+Код возврата: 0
+Фактический stdout сохранён в reports\logs\python_version.stdout.txt.
+Фактический stderr сохранён в reports\logs\python_version.stderr.txt.

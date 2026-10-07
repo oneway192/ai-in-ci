@@ -1,0 +1,13 @@
+id,filename,media_type,source,date_acquired,license,rights_holder,personal_data,consent,sha256
+item01,item01.wav,audio,https://example.org/archive/item01,2026-01-26,CC-BY-NC-SA-4.0,Автор-20,no,n-a,06932f3665ca4300deedf08baccb5775198616a04268f414332288952c71ab19
+item02,item02.txt,text,https://example.org/archive/item02,2026-03-08,CC0-1.0,Автор-13,no,n-a,c25e4282bad864fe038cd248d6bed75feef79c7f9eb0567c7ca122c4f76bc884
+item03,item03.png,image,https://example.org/archive/item03,2026-01-15,MIT,Автор-40,no,n-a,3341999e407900fc33b455437f845bad57c109c5a4f89f36bbe8befaedcd20a5
+item04,item04.wav,audio,https://example.org/archive/item04,2026-01-02,CC-BY-NC-4.0,Автор-13,no,n-a,59054a0ded5ca308d7fe030dc21780012def401603ffce79926e5d1f4073d1b3
+item05,item05.txt,text,https://example.org/archive/item05,2026-04-23,CC0-1.0,Автор-08,no,n-a,8e04fdcc4c2f68f3f9f576e90a8afb59d7af73c3af159bc6d48fc8b51f2b2fd3
+item06,item06.png,image,https://example.org/archive/item06,2026-01-09,Apache-2.0,Автор-19,no,n-a,f08a8f722e96076ab1868e70959a6a534a5efe946187cd8fe4cdd52e94777365
+item07,item07.wav,audio,https://example.org/archive/item07,2026-05-08,CC0-1.0,Автор-22,no,n-a,9ea7ba724bb8440fd02178a37ba480665854ccd57ad862ff7af0ed9984446d45
+item08,item08.txt,text,https://example.org/archive/item08,2026-06-03,CC-BY-NC-SA-4.0,Автор-01,no,n-a,dddb0a4c9ea6a77200e411bf7833ceb985ea991e4d14890266c2375e06cedfd7
+item09,item09.png,image,https://example.org/archive/item09,2026-01-19,CC-BY-NC-4.0,Автор-08,no,n-a,2535124f908397994393e57c68af73ea132300cfa234760e27402ab03dd47b0c
+item10,item10.wav,audio,https://example.org/archive/item10,2026-08-13,MIT,Автор-28,no,n-a,06932f3665ca4300deedf08baccb5775198616a04268f414332288952c71ab19
+item11,item11.txt,text,https://example.org/archive/item11,2026-05-28,CC0-1.0,Автор-25,no,n-a,cd7199ddab62cf5fe97639981085c223b52088887530545d670f610c75209aa5
+item12,item12.png,image,https://example.org/archive/item12,2026-05-28,Apache-2.0,Автор-12,no,n-a,46a4f288b704aba6bfa0756c1fc3be19b356bdf2b7e7052a6914e627fe61edc3

@@ -1,0 +1,1 @@
+карточка модели записана: artifacts\model_card.md

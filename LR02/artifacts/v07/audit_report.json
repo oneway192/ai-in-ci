@@ -1,0 +1,32 @@
+[
+  {
+    "rule": "R3",
+    "severity": "error",
+    "item": "item01",
+    "message": "CC-BY-NC-SA-4.0: условие NonCommercial противоречит коммерческому использованию"
+  },
+  {
+    "rule": "R3",
+    "severity": "error",
+    "item": "item04",
+    "message": "CC-BY-NC-4.0: условие NonCommercial противоречит коммерческому использованию"
+  },
+  {
+    "rule": "R3",
+    "severity": "error",
+    "item": "item08",
+    "message": "CC-BY-NC-SA-4.0: условие NonCommercial противоречит коммерческому использованию"
+  },
+  {
+    "rule": "R3",
+    "severity": "error",
+    "item": "item09",
+    "message": "CC-BY-NC-4.0: условие NonCommercial противоречит коммерческому использованию"
+  },
+  {
+    "rule": "R9",
+    "severity": "warning",
+    "item": "item10",
+    "message": "контрольная сумма совпадает с item01 — дубликат"
+  }
+]
