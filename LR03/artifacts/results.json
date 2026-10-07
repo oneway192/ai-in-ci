@@ -1,0 +1,45 @@
+{
+  "variant": 7,
+  "scene": {
+    "size": [128, 128],
+    "element_type": "RGB{Float64}",
+    "minimum": 0.3311562226432249,
+    "maximum": 0.6685814096363565,
+    "bytes": 393216
+  },
+  "luminance_max_abs_difference": 6.019111098432006e-9,
+  "reproducibility": {
+    "sha256_first": "855526fd63358f26e2528df368914a0afe8f5f9ba808d664c98c41c6c5c64295",
+    "sha256_repeated": "855526fd63358f26e2528df368914a0afe8f5f9ba808d664c98c41c6c5c64295",
+    "equal": true
+  },
+  "psnr_seed_101_db": 33.50681764883751,
+  "mean_psnr_seeds_101_105_db": 33.51000167578998,
+  "metrics": {
+    "mean": {
+      "base": 0.4919658476107546,
+      "s": 8.388562082373828e-5,
+      "after": 0.492913411458333,
+      "delta": 0.000947563847578381,
+      "abs_delta_over_s": 11.295903138982737,
+      "significant": true
+    },
+    "contrast": {
+      "base": 0.022426192324705635,
+      "s": 0.00014979314506126002,
+      "after": 0.03325719624439617,
+      "delta": 0.010831003919690538,
+      "abs_delta_over_s": 72.30640571209747,
+      "significant": true
+    },
+    "entropy": {
+      "base": 1.6542345757698247,
+      "s": 0.006208479477248238,
+      "after": 1.0124437443170622,
+      "delta": -0.6417908314527625,
+      "abs_delta_over_s": 103.3732709924687,
+      "significant": true
+    }
+  }
+}
+

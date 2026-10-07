@@ -1,0 +1,50 @@
+ЛР03, вариант 7
+Дата: 07.10.2026
+
+Среда:
+Engee: 26.9.2-H4
+Julia: 1.12.4
+
+Данные:
+scene element type: RGB{Float64}
+luminance dtype: Float64
+
+Пакеты, использованные кодом:
+Images
+Random
+Statistics
+SHA
+Plots
+
+Точные версии пакетов:
+не зафиксированы в экспортированном выводе текущей сессии
+
+Текущая ОС/CPU:
+versioninfo() в экспортированной сессии ЛР03 не зафиксирован;
+ОС и CPU текущей сессии не предполагаются.
+Device отдельно не фиксировался.
+
+Справочно, предыдущая сессия ЛР01:
+Engee: 26.9.2-H1
+OS: Linux (x86_64-linux-gnu)
+CPU: 112 × Intel(R) Xeon(R) Platinum 8180 CPU @ 2.50GHz
+Эти OS/CPU относятся к ЛР01 и не являются повторно подтверждёнными данными текущей ЛР03.
+
+Учебная библиотека:
+file: src/lab03_lib.jl
+semantic version: не указана в предоставленном файле
+size: 5027 bytes
+SHA-256: cd1622643e7cfe7cc01bb7d8067e4802a76f6a76e9a6833ba4c09c84bb9fa62a
+
+Параметры:
+variant = 7
+scene = low contrast
+lo = 0.40
+hi = 0.60
+noise = 0.02
+checker = 0
+seed = 101
+seed series = 101:105
+histogram bins = 32
+factor = quantization to 4 bit / 16 levels
+

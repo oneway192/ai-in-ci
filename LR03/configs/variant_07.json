@@ -1,0 +1,38 @@
+{
+  "variant": 7,
+  "student": {
+    "name": "Провков Иван Александрович",
+    "group": "Т26ИИКТ-МИК11"
+  },
+  "scene": {
+    "description": "низкоконтрастная сцена",
+    "width": 128,
+    "height": 128,
+    "element_type": "RGB{Float64}",
+    "parameters": {
+      "lo": 0.4,
+      "hi": 0.6,
+      "noise": 0.02,
+      "checker": 0
+    }
+  },
+  "factor": {
+    "description": "квантование яркости до 4 бит",
+    "bits": 4,
+    "levels": 16,
+    "apply_factor_id": 1
+  },
+  "seeds": [101, 102, 103, 104, 105],
+  "histogram_bins": 32,
+  "hypothesis": "При квантовании низкоконтрастной сцены до 4 бит средняя яркость изменится слабо, наиболее заметное изменение ожидается в распределении яркости и энтропии; контраст также может измениться.",
+  "criteria": {
+    "statistical": "abs(delta) > 2 * s",
+    "practical_relative_change_percent": 5,
+    "practical_psnr_db_below": 30
+  },
+  "observed_environment": {
+    "engee": "26.9.2-H4",
+    "julia": "1.12.4"
+  }
+}
+
