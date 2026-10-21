@@ -1,0 +1,74 @@
+{
+  "status": "COMPLETE",
+  "variant": 7,
+  "brief": 2,
+  "condition": "repeat",
+  "seed": 1007,
+  "hypothesis": "fresh CPU generators with the same seed and unchanged session will produce bit-identical A and B",
+  "tolerance": {
+    "identical": "pixel equality",
+    "close_min_psnr_db": 40.0
+  },
+  "model_id": "stabilityai/sd-turbo",
+  "revision": "b261bac6fd2cf515557d5d0707481eafa0485ec2",
+  "prompt": "square podcast cover about the city environment, abstract layered skyline of geometric shapes, teal and orange palette, minimal flat style, no text, no people",
+  "parameters": {
+    "steps": 1,
+    "guidance_scale": 0.0,
+    "size": 512,
+    "generator_device": "cpu",
+    "dtype": "float16"
+  },
+  "environment": {
+    "execution_environment": "Google Colab",
+    "gpu": "Tesla T4",
+    "cuda_available": true,
+    "python": "3.13.15",
+    "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
+    "packages": {
+      "torch": "2.11.0+cu130",
+      "diffusers": "0.41.0",
+      "transformers": "5.20.1",
+      "pillow": "11.3.0"
+    }
+  },
+  "library_sha256": "4eb176506585ffcda1702605a767309fb451808229c3622f80ce882b7fa2ce1a",
+  "timings_seconds": {
+    "load": 26.77,
+    "warmup": 5.62,
+    "baseline_generation": 0.36,
+    "pair": 0.66
+  },
+  "baseline_sha256": "96b809ceb59215db2a042f58ec1bdf68d336f5b6797a415f70790495fadb6efb",
+  "comparison": {
+    "variant": 7,
+    "condition": "repeat",
+    "seed": 1007,
+    "sha256_a": "96b809ceb59215db2a042f58ec1bdf68d336f5b6797a415f70790495fadb6efb",
+    "sha256_b": "96b809ceb59215db2a042f58ec1bdf68d336f5b6797a415f70790495fadb6efb",
+    "pixel_equal": true,
+    "max_diff": 0,
+    "psnr_db": "inf",
+    "tolerance_db": 40.0,
+    "verdict": "identical",
+    "pair_seconds": 0.66
+  },
+  "visual_check": true,
+  "intentional_error": {
+    "description": "one shared CPU Generator object passed to two consecutive calls",
+    "seed": 1007,
+    "sha256_first": "96b809ceb59215db2a042f58ec1bdf68d336f5b6797a415f70790495fadb6efb",
+    "sha256_second": "2c1de397892ed86b7ae10074c54b73f745c2a5e455f918fafe13349c159b55cd",
+    "pixel_equal": false,
+    "max_diff": 255,
+    "psnr_db": 9.035864314461799,
+    "diagnosis": "Generator state advances after the first call",
+    "fix": "create a fresh torch.Generator(device='cpu').manual_seed(seed) for each call"
+  },
+  "limitations": [
+    "same-session result does not prove reproducibility on another machine",
+    "different GPU, package versions or platform may change the result",
+    "SHA-256 and PSNR do not assess artistic quality"
+  ],
+  "license": "Stability AI Community License Agreement; educational non-commercial use; retain required notices when distributing"
+}

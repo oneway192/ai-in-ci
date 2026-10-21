@@ -1,0 +1,11 @@
+{
+  "description": "one shared CPU Generator object passed to two consecutive calls",
+  "seed": 1007,
+  "sha256_first": "96b809ceb59215db2a042f58ec1bdf68d336f5b6797a415f70790495fadb6efb",
+  "sha256_second": "2c1de397892ed86b7ae10074c54b73f745c2a5e455f918fafe13349c159b55cd",
+  "pixel_equal": false,
+  "max_diff": 255,
+  "psnr_db": 9.035864314461799,
+  "diagnosis": "Generator state advances after the first call",
+  "fix": "create a fresh torch.Generator(device='cpu').manual_seed(seed) for each call"
+}

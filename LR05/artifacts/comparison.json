@@ -1,0 +1,13 @@
+{
+  "variant": 7,
+  "condition": "repeat",
+  "seed": 1007,
+  "sha256_a": "96b809ceb59215db2a042f58ec1bdf68d336f5b6797a415f70790495fadb6efb",
+  "sha256_b": "96b809ceb59215db2a042f58ec1bdf68d336f5b6797a415f70790495fadb6efb",
+  "pixel_equal": true,
+  "max_diff": 0,
+  "psnr_db": "inf",
+  "tolerance_db": 40.0,
+  "verdict": "identical",
+  "pair_seconds": 0.66
+}
