@@ -1,0 +1,162 @@
+{
+  "dataset": "disc_rect",
+  "active_kl_threshold_nat": 0.05,
+  "seed_101": {
+    "AE, beta=0": {
+      "beta": 0.0,
+      "mu_std": [
+        3.04,
+        4.647,
+        7.164,
+        3.529,
+        6.291,
+        5.424,
+        5.611,
+        5.137
+      ],
+      "kl_axis_nat": [
+        43.999,
+        11.925,
+        32.315,
+        37.798,
+        30.667,
+        15.133,
+        23.119,
+        43.526
+      ],
+      "active_axes": null,
+      "recon": 26.852136611938477,
+      "interp": 24.0360902150472,
+      "sample": 12.71298885345459,
+      "r2": 0.9662538170814514
+    },
+    "VAE, beta=1": {
+      "beta": 1.0,
+      "mu_std": [
+        0.056,
+        1.029,
+        0.945,
+        0.905,
+        1.065,
+        0.915,
+        0.037,
+        1.016
+      ],
+      "kl_axis_nat": [
+        0.01,
+        1.975,
+        1.279,
+        1.17,
+        2.09,
+        1.181,
+        0.004,
+        1.764
+      ],
+      "active_axes": 6,
+      "recon": 26.060686111450195,
+      "interp": 22.71415646870931,
+      "sample": 22.85993003845215,
+      "r2": 0.923887312412262
+    },
+    "VAE, beta=8": {
+      "beta": 8.0,
+      "mu_std": [
+        0.05,
+        0.037,
+        0.03,
+        0.822,
+        0.04,
+        0.8,
+        0.971,
+        0.049
+      ],
+      "kl_axis_nat": [
+        0.002,
+        0.001,
+        0.001,
+        0.597,
+        0.001,
+        0.566,
+        1.152,
+        0.002
+      ],
+      "active_axes": 3,
+      "recon": 21.739347457885742,
+      "interp": 21.94552167256673,
+      "sample": 22.690052032470703,
+      "r2": 0.8859629034996033
+    }
+  },
+  "active_axes_by_seed": [
+    {
+      "mode": "A",
+      "seed": 101,
+      "active_axes": 6,
+      "kl_total_nat": 9.47,
+      "mu_std_max": 1.07
+    },
+    {
+      "mode": "B",
+      "seed": 101,
+      "active_axes": 3,
+      "kl_total_nat": 2.32,
+      "mu_std_max": 0.97
+    },
+    {
+      "mode": "A",
+      "seed": 102,
+      "active_axes": 6,
+      "kl_total_nat": 9.79,
+      "mu_std_max": 1.09
+    },
+    {
+      "mode": "B",
+      "seed": 102,
+      "active_axes": 4,
+      "kl_total_nat": 2.38,
+      "mu_std_max": 1.0
+    },
+    {
+      "mode": "A",
+      "seed": 103,
+      "active_axes": 6,
+      "kl_total_nat": 9.33,
+      "mu_std_max": 1.07
+    },
+    {
+      "mode": "B",
+      "seed": 103,
+      "active_axes": 3,
+      "kl_total_nat": 2.16,
+      "mu_std_max": 0.98
+    },
+    {
+      "mode": "A",
+      "seed": 104,
+      "active_axes": 6,
+      "kl_total_nat": 9.08,
+      "mu_std_max": 1.06
+    },
+    {
+      "mode": "B",
+      "seed": 104,
+      "active_axes": 4,
+      "kl_total_nat": 2.21,
+      "mu_std_max": 0.95
+    },
+    {
+      "mode": "A",
+      "seed": 105,
+      "active_axes": 6,
+      "kl_total_nat": 9.39,
+      "mu_std_max": 1.11
+    },
+    {
+      "mode": "B",
+      "seed": 105,
+      "active_axes": 4,
+      "kl_total_nat": 1.74,
+      "mu_std_max": 0.91
+    }
+  ]
+}

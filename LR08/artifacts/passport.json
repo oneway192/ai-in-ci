@@ -1,0 +1,626 @@
+{
+  "status": "COMPLETE",
+  "variant": 7,
+  "dataset": "disc_rect",
+  "dataset_factors": 4,
+  "factor": "beta_1_to_8",
+  "seeds": [
+    101,
+    102,
+    103,
+    104,
+    105
+  ],
+  "hypothesis_recorded_at": "27.10.2026 21:00",
+  "hypothesis": "beta = 8 instead of 1 lowers recon by more than 1 dB, R^2 by more than 0.05 and interp by more than 1 dB; samples change within ±1 dB; active axes >= 4 at beta = 1 and < 4 at beta = 8",
+  "tolerance": {
+    "recon": 1.0,
+    "interp": 1.0,
+    "sample": 1.0,
+    "r2": 0.05
+  },
+  "direction": {
+    "recon": "increase_is_improvement",
+    "interp": "increase_is_improvement",
+    "sample": "increase_is_improvement",
+    "r2": "increase_is_improvement"
+  },
+  "control_metrics": [],
+  "model": {
+    "library": "lab08_lib.ConvVAE",
+    "optimizer": "Adam",
+    "lr": 0.002,
+    "batch": 128,
+    "epochs": 30,
+    "kl_warmup_epochs": 10
+  },
+  "data": {
+    "generator": "lab07_lib.render",
+    "data_seed": 7,
+    "n_train": 4096,
+    "n_test": 1024,
+    "image": "3x32x32",
+    "interp_pairs": 200,
+    "samples": 256
+  },
+  "mode_a": {
+    "d": 8,
+    "beta": 1.0,
+    "interp": "lin",
+    "temp": 1.0,
+    "epochs": 30
+  },
+  "mode_b": {
+    "d": 8,
+    "beta": 8.0,
+    "interp": "lin",
+    "temp": 1.0,
+    "epochs": 30
+  },
+  "changed_fields": [
+    "beta"
+  ],
+  "environment": {
+    "execution_environment": "Google Colab",
+    "gpu": "Tesla T4",
+    "cuda_available": true,
+    "cuda_runtime": "13.0",
+    "python": "3.13.16",
+    "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+    "packages": {
+      "torch": "2.11.0+cu130",
+      "numpy": "2.1.3",
+      "pillow": "11.3.0"
+    },
+    "started_at_utc": "2026-10-27T18:08:48.975529+00:00"
+  },
+  "library_sha256": {
+    "lab07_lib.py": "d84b83a878f55e95289d76a788dc9fa84d3249d0d33aa719d9db8d6792fd2698",
+    "lab08_lib.py": "f414c49bd0df4eb3aae1f822b29ef2eb112979afc078b26bc65645fd3f43fe9f",
+    "lab08_demo.py": "8ab781bf6a0e71fb9c007e2a0d88f25f96686aa7fb1237190be9846672865c53"
+  },
+  "timings_seconds": {
+    "demo_total": 85.61,
+    "variant_summary": 35.83
+  },
+  "metrics": [
+    {
+      "metric": "recon",
+      "A": 25.787668228149414,
+      "s": 0.49432592914224566,
+      "B": 21.426825714111327,
+      "d": -4.360842514038087,
+      "ratio": 8.821796019490664,
+      "sig_2s": true
+    },
+    {
+      "metric": "interp",
+      "A": 22.702873992919923,
+      "s": 0.3353296950423046,
+      "B": 21.516305287679035,
+      "d": -1.1865687052408873,
+      "ratio": 3.538513656212856,
+      "sig_2s": true
+    },
+    {
+      "metric": "sample",
+      "A": 22.6334529876709,
+      "s": 0.17991518132937792,
+      "B": 22.166740798950194,
+      "d": -0.46671218872070597,
+      "ratio": 2.594067856154269,
+      "sig_2s": true
+    },
+    {
+      "metric": "r2",
+      "A": 0.9262062311172485,
+      "s": 0.010632466585124596,
+      "B": 0.8450091123580933,
+      "d": -0.08119711875915525,
+      "ratio": 7.636715160032054,
+      "sig_2s": true
+    }
+  ],
+  "classification": [
+    {
+      "metric": "recon",
+      "change": -4.360842514038087,
+      "tolerance": 1.0,
+      "class": "ухудшение",
+      "sig_2s": true,
+      "2s_and_tolerance_agree": true,
+      "class_tolerance_x0_5": "ухудшение",
+      "class_tolerance_x2": "ухудшение"
+    },
+    {
+      "metric": "interp",
+      "change": -1.1865687052408873,
+      "tolerance": 1.0,
+      "class": "ухудшение",
+      "sig_2s": true,
+      "2s_and_tolerance_agree": true,
+      "class_tolerance_x0_5": "ухудшение",
+      "class_tolerance_x2": "нейтрально"
+    },
+    {
+      "metric": "sample",
+      "change": -0.46671218872070597,
+      "tolerance": 1.0,
+      "class": "нейтрально",
+      "sig_2s": true,
+      "2s_and_tolerance_agree": false,
+      "class_tolerance_x0_5": "нейтрально",
+      "class_tolerance_x2": "нейтрально"
+    },
+    {
+      "metric": "r2",
+      "change": -0.08119711875915525,
+      "tolerance": 0.05,
+      "class": "ухудшение",
+      "sig_2s": true,
+      "2s_and_tolerance_agree": true,
+      "class_tolerance_x0_5": "ухудшение",
+      "class_tolerance_x2": "нейтрально"
+    }
+  ],
+  "baseline": {
+    "dataset": "disc_rect",
+    "baseline_psnr": 16.892166137695312,
+    "recon_gain_a_db": 8.895502090454102,
+    "recon_gain_b_db": 4.534659576416015,
+    "interp_gain_a_db": 5.81070785522461,
+    "interp_gain_b_db": 4.624139149983723
+  },
+  "diagnostics_seed_101": {
+    "AE, beta=0": {
+      "beta": 0.0,
+      "mu_std": [
+        3.04,
+        4.647,
+        7.164,
+        3.529,
+        6.291,
+        5.424,
+        5.611,
+        5.137
+      ],
+      "kl_axis_nat": [
+        43.999,
+        11.925,
+        32.315,
+        37.798,
+        30.667,
+        15.133,
+        23.119,
+        43.526
+      ],
+      "active_axes": null,
+      "recon": 26.852136611938477,
+      "interp": 24.0360902150472,
+      "sample": 12.71298885345459,
+      "r2": 0.9662538170814514
+    },
+    "VAE, beta=1": {
+      "beta": 1.0,
+      "mu_std": [
+        0.056,
+        1.029,
+        0.945,
+        0.905,
+        1.065,
+        0.915,
+        0.037,
+        1.016
+      ],
+      "kl_axis_nat": [
+        0.01,
+        1.975,
+        1.279,
+        1.17,
+        2.09,
+        1.181,
+        0.004,
+        1.764
+      ],
+      "active_axes": 6,
+      "recon": 26.060686111450195,
+      "interp": 22.71415646870931,
+      "sample": 22.85993003845215,
+      "r2": 0.923887312412262
+    },
+    "VAE, beta=8": {
+      "beta": 8.0,
+      "mu_std": [
+        0.05,
+        0.037,
+        0.03,
+        0.822,
+        0.04,
+        0.8,
+        0.971,
+        0.049
+      ],
+      "kl_axis_nat": [
+        0.002,
+        0.001,
+        0.001,
+        0.597,
+        0.001,
+        0.566,
+        1.152,
+        0.002
+      ],
+      "active_axes": 3,
+      "recon": 21.739347457885742,
+      "interp": 21.94552167256673,
+      "sample": 22.690052032470703,
+      "r2": 0.8859629034996033
+    }
+  },
+  "active_axes_by_seed": [
+    {
+      "mode": "A",
+      "seed": 101,
+      "active_axes": 6,
+      "kl_total_nat": 9.47,
+      "mu_std_max": 1.07
+    },
+    {
+      "mode": "B",
+      "seed": 101,
+      "active_axes": 3,
+      "kl_total_nat": 2.32,
+      "mu_std_max": 0.97
+    },
+    {
+      "mode": "A",
+      "seed": 102,
+      "active_axes": 6,
+      "kl_total_nat": 9.79,
+      "mu_std_max": 1.09
+    },
+    {
+      "mode": "B",
+      "seed": 102,
+      "active_axes": 4,
+      "kl_total_nat": 2.38,
+      "mu_std_max": 1.0
+    },
+    {
+      "mode": "A",
+      "seed": 103,
+      "active_axes": 6,
+      "kl_total_nat": 9.33,
+      "mu_std_max": 1.07
+    },
+    {
+      "mode": "B",
+      "seed": 103,
+      "active_axes": 3,
+      "kl_total_nat": 2.16,
+      "mu_std_max": 0.98
+    },
+    {
+      "mode": "A",
+      "seed": 104,
+      "active_axes": 6,
+      "kl_total_nat": 9.08,
+      "mu_std_max": 1.06
+    },
+    {
+      "mode": "B",
+      "seed": 104,
+      "active_axes": 4,
+      "kl_total_nat": 2.21,
+      "mu_std_max": 0.95
+    },
+    {
+      "mode": "A",
+      "seed": 105,
+      "active_axes": 6,
+      "kl_total_nat": 9.39,
+      "mu_std_max": 1.11
+    },
+    {
+      "mode": "B",
+      "seed": 105,
+      "active_axes": 4,
+      "kl_total_nat": 1.74,
+      "mu_std_max": 0.91
+    }
+  ],
+  "visual_check": {
+    "ae_samples_look_like_scenes": false,
+    "vae_samples_look_like_scenes": true,
+    "path_beta1_ok": true,
+    "path_beta8_ok": true,
+    "notes": "Сэмплы AE из N(0, I): серые размытые пятна с бледными оранжевыми следами, диск и полоса не читаются. Сэмплы VAE β = 1: в 7 из 8 — узнаваемые сцены с диском и полосой, в пятом сэмпле два диска (невозможная сцена). Путь β = 1: диск плавно смещается вверх и чуть увеличивается, полоса переходит слева направо; в средних кадрах полоса растянута и полупрозрачна, но не исчезает. Путь β = 8: та же траектория, но диск заметно размыт, полоса в середине пути сильнее растянута в ленту."
+  },
+  "demo_reproduction": {
+    "variant": 1,
+    "factor": "beta_1_to_8",
+    "rows": [
+      {
+        "metric": "recon",
+        "A": 26.343678283691407,
+        "s": 0.5765522023489769,
+        "B": 22.54640312194824,
+        "d": -3.7972751617431655,
+        "ratio": 6.586177533053186,
+        "sig_2s": true,
+        "A_ref": 26.37,
+        "s_ref": 0.61,
+        "B_ref": 22.53,
+        "d_ref": -3.84,
+        "A_within_2s_ref": true,
+        "B_within_2s_ref": true
+      },
+      {
+        "metric": "interp",
+        "A": 22.61430931091309,
+        "s": 0.4090498751902204,
+        "B": 21.98430506388346,
+        "d": -0.6300042470296283,
+        "ratio": 1.5401648680045619,
+        "sig_2s": false,
+        "A_ref": 22.55,
+        "s_ref": 0.48,
+        "B_ref": 21.9,
+        "d_ref": -0.65,
+        "A_within_2s_ref": true,
+        "B_within_2s_ref": true
+      },
+      {
+        "metric": "sample",
+        "A": 23.2458927154541,
+        "s": 0.47107365899513093,
+        "B": 23.27770881652832,
+        "d": 0.03181610107422017,
+        "ratio": 0.06753954602787295,
+        "sig_2s": false,
+        "A_ref": 23.24,
+        "s_ref": 0.56,
+        "B_ref": 23.21,
+        "d_ref": -0.03,
+        "A_within_2s_ref": true,
+        "B_within_2s_ref": true
+      },
+      {
+        "metric": "r2",
+        "A": 0.9001679182052612,
+        "s": 0.01836421633050336,
+        "B": 0.8033580303192138,
+        "d": -0.09680988788604739,
+        "ratio": 5.271659086548881,
+        "sig_2s": true,
+        "A_ref": 0.899,
+        "s_ref": 0.022,
+        "B_ref": 0.786,
+        "d_ref": -0.114,
+        "A_within_2s_ref": true,
+        "B_within_2s_ref": true
+      }
+    ],
+    "diagnostics": {
+      "AE, beta=0": {
+        "mu_std": [
+          2.81,
+          4.95,
+          2.72,
+          3.12,
+          4.11,
+          4.05,
+          4.12,
+          2.09
+        ],
+        "active": "-",
+        "sample": 12.81,
+        "interp": 22.4,
+        "recon": 26.07,
+        "reference": {
+          "active": "-",
+          "recon": 26.24,
+          "interp": 22.3,
+          "sample": 12.86
+        }
+      },
+      "VAE, beta=1": {
+        "mu_std": [
+          0.98,
+          0.11,
+          0.15,
+          0.98,
+          0.5,
+          1.09,
+          1.06,
+          1.01
+        ],
+        "active": "6",
+        "sample": 23.73,
+        "interp": 22.89,
+        "recon": 26.77,
+        "reference": {
+          "active": "7",
+          "recon": 26.69,
+          "interp": 22.68,
+          "sample": 23.28
+        }
+      },
+      "VAE, beta=8": {
+        "mu_std": [
+          0.06,
+          0.15,
+          0.89,
+          0.04,
+          0.04,
+          0.88,
+          0.12,
+          0.09
+        ],
+        "active": "2",
+        "sample": 23.46,
+        "interp": 22.41,
+        "recon": 22.25,
+        "reference": {
+          "active": "2",
+          "recon": 22.24,
+          "interp": 22.39,
+          "sample": 23.41
+        }
+      }
+    },
+    "collapse": {
+      "без разогрева": {
+        "recon_by_seed": [
+          26.5,
+          17.2,
+          25.5,
+          26.1,
+          26.1
+        ],
+        "reference": [
+          26.5,
+          17.2,
+          25.7,
+          26.7,
+          24.7
+        ]
+      },
+      "разогрев 10 эпох": {
+        "recon_by_seed": [
+          26.7,
+          26.8,
+          25.5,
+          26.5,
+          25.7
+        ],
+        "reference": [
+          26.7,
+          26.9,
+          25.6,
+          26.9,
+          25.8
+        ]
+      }
+    },
+    "demo_seconds": 85.61
+  },
+  "intentional_error": {
+    "error_1_no_kl_warmup": {
+      "description": "VAE trained with beta = 1 from the first step and judged only by the mean over seeds",
+      "by_seed": {
+        "без разогрева": [
+          {
+            "seed": 101,
+            "recon": 25.967939376831055,
+            "interp": 22.561343510945637,
+            "sample": 22.890033721923828,
+            "r2": 0.8137305974960327,
+            "active_axes": 5
+          },
+          {
+            "seed": 102,
+            "recon": 25.76397705078125,
+            "interp": 22.60970115661621,
+            "sample": 22.8358154296875,
+            "r2": 0.8036662340164185,
+            "active_axes": 6
+          },
+          {
+            "seed": 103,
+            "recon": 25.11138916015625,
+            "interp": 22.541807810465496,
+            "sample": 22.817142486572266,
+            "r2": 0.874157726764679,
+            "active_axes": 6
+          },
+          {
+            "seed": 104,
+            "recon": 25.590120315551758,
+            "interp": 22.326004028320312,
+            "sample": 22.891023635864258,
+            "r2": 0.7807197570800781,
+            "active_axes": 5
+          },
+          {
+            "seed": 105,
+            "recon": 16.879173278808594,
+            "interp": 17.367167790730793,
+            "sample": 19.284133911132812,
+            "r2": 0.3275429606437683,
+            "active_axes": 0
+          }
+        ],
+        "разогрев 10 эпох": [
+          {
+            "seed": 101,
+            "recon": 26.042438507080078,
+            "interp": 22.70584233601888,
+            "sample": 22.831995010375977,
+            "r2": 0.9244493842124939,
+            "active_axes": 6
+          },
+          {
+            "seed": 102,
+            "recon": 26.50942611694336,
+            "interp": 23.204875946044922,
+            "sample": 22.619802474975586,
+            "r2": 0.9357681274414062,
+            "active_axes": 6
+          },
+          {
+            "seed": 103,
+            "recon": 25.436668395996094,
+            "interp": 22.50148328145345,
+            "sample": 22.37531852722168,
+            "r2": 0.9279284477233887,
+            "active_axes": 6
+          },
+          {
+            "seed": 104,
+            "recon": 25.433250427246094,
+            "interp": 22.590606689453125,
+            "sample": 22.784069061279297,
+            "r2": 0.92463618516922,
+            "active_axes": 6
+          },
+          {
+            "seed": 105,
+            "recon": 25.463171005249023,
+            "interp": 22.411004384358723,
+            "sample": 22.368572235107422,
+            "r2": 0.9139081239700317,
+            "active_axes": 6
+          }
+        ]
+      },
+      "diagnosis": "posterior collapse: recon equals the mean-image baseline, R^2 near 0, no active axes",
+      "fix": "linear KL warm-up over the first 10 epochs; inspect every seed"
+    },
+    "error_2_ae_prior_samples": {
+      "description": "samples from N(0, I) decoded by a plain autoencoder (beta = 0)",
+      "nearest_psnr_db": {
+        "AE, beta=0": {
+          "prior_N01": 12.71298885345459,
+          "fitted_to_train_mu": 20.20919418334961
+        },
+        "VAE, beta=1": {
+          "prior_N01": 22.859928131103516,
+          "fitted_to_train_mu": 22.98108673095703
+        }
+      },
+      "diagnosis": "AE latent codes are not matched to N(0, I); samples fall where the decoder was not trained",
+      "fix": "use the KL term, or sample from the distribution of mu estimated on training scenes"
+    },
+    "baseline_psnr": 16.892166137695312
+  },
+  "limitations": [
+    "synthetic 32x32 scenes with a smooth background; conclusions do not transfer to photographs without checking",
+    "one architecture, one dataset, one factor, five seeds, 30 epochs",
+    "GPU training is not bitwise deterministic; values reproduce within the between-seed spread",
+    "nearest-neighbour PSNR of samples does not check sample diversity",
+    "R^2 is a linear measure and does not prove disentanglement"
+  ],
+  "license": "synthetic data generated by lab07_lib.py; no external data or pretrained weights",
+  "executed_at_utc": "2026-10-27T18:17:10.031238+00:00"
+}

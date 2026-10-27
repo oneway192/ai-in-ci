@@ -1,0 +1,42 @@
+{
+  "variant": 7,
+  "dataset": 2,
+  "dataset_kind": "disc_rect",
+  "dataset_factors": 4,
+  "factor": 1,
+  "factor_name": "beta_1_to_8",
+  "context_index_c": 1,
+  "factor_index_k": 0,
+  "seeds": [101, 102, 103, 104, 105],
+  "data_seed": 7,
+  "n_train": 4096,
+  "n_test": 1024,
+  "mode_a": {"d": 8, "beta": 1.0, "interp": "lin", "temp": 1.0, "epochs": 30},
+  "mode_b": {"d": 8, "beta": 8.0, "interp": "lin", "temp": 1.0, "epochs": 30},
+  "model": {"library": "lab08_lib.ConvVAE", "optimizer": "Adam", "lr": 0.002, "batch": 128, "kl_warmup_epochs": 10},
+  "metrics": {
+    "recon": "PSNR of reconstruction from mu on 1024 test scenes, dB",
+    "interp": "PSNR of decoded linear path at t = 0.25, 0.5, 0.75 vs the scene rendered from mean factors, 200 pairs, dB",
+    "sample": "mean PSNR of the nearest test scene for 256 samples from N(0, temp^2 I), dB",
+    "r2": "mean R^2 of linear recovery of scene factors from mu"
+  },
+  "tolerance": {
+    "recon": {"kind": "abs", "value": 1.0, "unit": "dB"},
+    "interp": {"kind": "abs", "value": 1.0, "unit": "dB"},
+    "sample": {"kind": "abs", "value": 1.0, "unit": "dB"},
+    "r2": {"kind": "abs", "value": 0.05}
+  },
+  "direction": {"recon": "increase_is_improvement", "interp": "increase_is_improvement", "sample": "increase_is_improvement", "r2": "increase_is_improvement"},
+  "control_metrics": [],
+  "significance_criterion": "abs(d) > 2 * s_A",
+  "active_axis_threshold_nat": 0.05,
+  "diagnostics": {"models": {"AE": 0.0, "VAE_beta_1": 1.0, "VAE_beta_8": 8.0}, "seed": 101},
+  "collapse_check": {"beta": 1.0, "warmup_epochs": [1e-9, 10], "seeds": [101, 102, 103, 104, 105]},
+  "comparison_sheet": {"sample_seed": 5, "samples": 8, "path_test_scenes": [0, 2], "path_points": 8, "model_seed": 101},
+  "library_sha256": {
+    "lab07_lib.py": "d84b83a878f55e95289d76a788dc9fa84d3249d0d33aa719d9db8d6792fd2698",
+    "lab08_lib.py": "f414c49bd0df4eb3aae1f822b29ef2eb112979afc078b26bc65645fd3f43fe9f",
+    "lab08_demo.py": "8ab781bf6a0e71fb9c007e2a0d88f25f96686aa7fb1237190be9846672865c53"
+  },
+  "hypothesis_recorded_at": "27.10.2026 21:00"
+}

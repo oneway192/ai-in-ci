@@ -1,0 +1,8 @@
+{
+  "dataset": "disc_rect",
+  "baseline_psnr": 16.892166137695312,
+  "recon_gain_a_db": 8.895502090454102,
+  "recon_gain_b_db": 4.534659576416015,
+  "interp_gain_a_db": 5.81070785522461,
+  "interp_gain_b_db": 4.624139149983723
+}

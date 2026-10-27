@@ -1,0 +1,109 @@
+{
+  "error_1_no_kl_warmup": {
+    "description": "VAE trained with beta = 1 from the first step and judged only by the mean over seeds",
+    "by_seed": {
+      "без разогрева": [
+        {
+          "seed": 101,
+          "recon": 25.967939376831055,
+          "interp": 22.561343510945637,
+          "sample": 22.890033721923828,
+          "r2": 0.8137305974960327,
+          "active_axes": 5
+        },
+        {
+          "seed": 102,
+          "recon": 25.76397705078125,
+          "interp": 22.60970115661621,
+          "sample": 22.8358154296875,
+          "r2": 0.8036662340164185,
+          "active_axes": 6
+        },
+        {
+          "seed": 103,
+          "recon": 25.11138916015625,
+          "interp": 22.541807810465496,
+          "sample": 22.817142486572266,
+          "r2": 0.874157726764679,
+          "active_axes": 6
+        },
+        {
+          "seed": 104,
+          "recon": 25.590120315551758,
+          "interp": 22.326004028320312,
+          "sample": 22.891023635864258,
+          "r2": 0.7807197570800781,
+          "active_axes": 5
+        },
+        {
+          "seed": 105,
+          "recon": 16.879173278808594,
+          "interp": 17.367167790730793,
+          "sample": 19.284133911132812,
+          "r2": 0.3275429606437683,
+          "active_axes": 0
+        }
+      ],
+      "разогрев 10 эпох": [
+        {
+          "seed": 101,
+          "recon": 26.042438507080078,
+          "interp": 22.70584233601888,
+          "sample": 22.831995010375977,
+          "r2": 0.9244493842124939,
+          "active_axes": 6
+        },
+        {
+          "seed": 102,
+          "recon": 26.50942611694336,
+          "interp": 23.204875946044922,
+          "sample": 22.619802474975586,
+          "r2": 0.9357681274414062,
+          "active_axes": 6
+        },
+        {
+          "seed": 103,
+          "recon": 25.436668395996094,
+          "interp": 22.50148328145345,
+          "sample": 22.37531852722168,
+          "r2": 0.9279284477233887,
+          "active_axes": 6
+        },
+        {
+          "seed": 104,
+          "recon": 25.433250427246094,
+          "interp": 22.590606689453125,
+          "sample": 22.784069061279297,
+          "r2": 0.92463618516922,
+          "active_axes": 6
+        },
+        {
+          "seed": 105,
+          "recon": 25.463171005249023,
+          "interp": 22.411004384358723,
+          "sample": 22.368572235107422,
+          "r2": 0.9139081239700317,
+          "active_axes": 6
+        }
+      ]
+    },
+    "diagnosis": "posterior collapse: recon equals the mean-image baseline, R^2 near 0, no active axes",
+    "fix": "linear KL warm-up over the first 10 epochs; inspect every seed"
+  },
+  "error_2_ae_prior_samples": {
+    "description": "samples from N(0, I) decoded by a plain autoencoder (beta = 0)",
+    "nearest_psnr_db": {
+      "AE, beta=0": {
+        "prior_N01": 12.71298885345459,
+        "fitted_to_train_mu": 20.20919418334961
+      },
+      "VAE, beta=1": {
+        "prior_N01": 22.859928131103516,
+        "fitted_to_train_mu": 22.98108673095703
+      }
+    },
+    "diagnosis": "AE latent codes are not matched to N(0, I); samples fall where the decoder was not trained",
+    "fix": "use the KL term, or sample from the distribution of mu estimated on training scenes"
+  },
+  "baseline_psnr": 16.892166137695312
+}
