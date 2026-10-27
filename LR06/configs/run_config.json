@@ -1,0 +1,38 @@
+{
+  "variant": 7,
+  "brief": 2,
+  "factor": 1,
+  "factor_name": "steps_1_to_4",
+  "context_index_c": 1,
+  "factor_index_k": 0,
+  "seeds": [101, 102, 103, 104, 105],
+  "model_id": "stabilityai/sd-turbo",
+  "revision": "b261bac6fd2cf515557d5d0707481eafa0485ec2",
+  "clip_id": "openai/clip-vit-base-patch32",
+  "clip_revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+  "mode_a": {"prompt": "BRIEFS[1]", "steps": 1, "guidance_scale": 0.0, "size": 512},
+  "mode_b": {"prompt": "BRIEFS[1]", "steps": 4, "guidance_scale": 0.0, "size": 512},
+  "dtype": "float16",
+  "generator_device": "cpu",
+  "clip_reference_text": "BRIEFS[1] (English brief)",
+  "tolerance": {
+    "clip": {"kind": "abs", "value": 1.0},
+    "edge": {"kind": "rel", "value": 0.10},
+    "contrast": {"kind": "rel", "value": 0.10},
+    "seconds": {"kind": "rel", "value": 0.20}
+  },
+  "direction": {
+    "clip": "increase_is_improvement",
+    "edge": "increase_is_deterioration",
+    "contrast": "increase_is_improvement",
+    "seconds": "increase_is_deterioration"
+  },
+  "significance_criterion": "abs(d) > 2 * s_A",
+  "intentional_error": {"seed": 101, "guidance_values": [0.0, 1.0, 3.0]},
+  "library_sha256": {
+    "lab05_lib.py": "4eb176506585ffcda1702605a767309fb451808229c3622f80ce882b7fa2ce1a",
+    "lab06_lib.py": "c6d8473cf5a3000f4c27fbdef57916c2fbce347db272928d5c4729472f748bd8",
+    "lab06_demo.py": "6bd455ea028a475f6d21593b6f969446b676a3627ab496fd7f125394361edf4a"
+  },
+  "hypothesis_recorded_at": "27.10.2026 18:10"
+}

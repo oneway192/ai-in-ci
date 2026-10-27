@@ -1,0 +1,64 @@
+{
+  "variant": 1,
+  "factor": "steps_1_to_4",
+  "rows": [
+    {
+      "metric": "clip",
+      "A": 30.797866582870483,
+      "s": 1.4309017437110398,
+      "B": 30.29200315475464,
+      "d": -0.5058634281158447,
+      "ratio": 0.35352771798564536,
+      "sig_2s": false,
+      "A_ref": 30.796,
+      "B_ref": 30.292,
+      "d_ref": -0.504,
+      "matches_reference": false
+    },
+    {
+      "metric": "edge",
+      "A": 0.045660816369404854,
+      "s": 0.006960480109480653,
+      "B": 0.09197612883167525,
+      "d": 0.04631531246227039,
+      "ratio": 6.654039913020619,
+      "sig_2s": true,
+      "A_ref": 0.0457,
+      "B_ref": 0.092,
+      "d_ref": 0.0463,
+      "matches_reference": true
+    },
+    {
+      "metric": "contrast",
+      "A": 0.1922867990891968,
+      "s": 0.02249353315005205,
+      "B": 0.2778616052724856,
+      "d": 0.0855748061832888,
+      "ratio": 3.804418168209861,
+      "sig_2s": true,
+      "A_ref": 0.1923,
+      "B_ref": 0.2778,
+      "d_ref": 0.0855,
+      "matches_reference": false
+    },
+    {
+      "metric": "seconds",
+      "A": 0.35702238060002855,
+      "s": 0.09228972658274721,
+      "B": 0.625275976399962,
+      "d": 0.26825359579993346,
+      "ratio": 2.906646337925994,
+      "sig_2s": true,
+      "A_ref": 0.2854,
+      "B_ref": 0.5266,
+      "d_ref": 0.2412,
+      "matches_reference": false
+    }
+  ],
+  "intentional_error": {
+    "guidance_1_equals_0_bitwise": true,
+    "psnr_guidance_3_vs_0_db": 11.605078740312596,
+    "psnr_reference_db": 11.6
+  },
+  "demo_seconds": 28.29
+}

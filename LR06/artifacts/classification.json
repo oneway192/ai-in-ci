@@ -1,0 +1,53 @@
+{
+  "variant": 7,
+  "rows": [
+    {
+      "metric": "clip",
+      "change": -1.4444392919540405,
+      "change_kind": "abs",
+      "tolerance": 1.0,
+      "class": "ухудшение",
+      "outside_tolerance": true,
+      "sig_2s": false,
+      "2s_and_tolerance_agree": false,
+      "class_tolerance_x0_5": "ухудшение",
+      "class_tolerance_x2": "нейтрально"
+    },
+    {
+      "metric": "edge",
+      "change": 0.5684044120702582,
+      "change_kind": "rel",
+      "tolerance": 0.1,
+      "class": "ухудшение",
+      "outside_tolerance": true,
+      "sig_2s": false,
+      "2s_and_tolerance_agree": false,
+      "class_tolerance_x0_5": "ухудшение",
+      "class_tolerance_x2": "ухудшение"
+    },
+    {
+      "metric": "contrast",
+      "change": 0.471920842595797,
+      "change_kind": "rel",
+      "tolerance": 0.1,
+      "class": "улучшение",
+      "outside_tolerance": true,
+      "sig_2s": true,
+      "2s_and_tolerance_agree": true,
+      "class_tolerance_x0_5": "улучшение",
+      "class_tolerance_x2": "улучшение"
+    },
+    {
+      "metric": "seconds",
+      "change": 0.7918408376641874,
+      "change_kind": "rel",
+      "tolerance": 0.2,
+      "class": "ухудшение",
+      "outside_tolerance": true,
+      "sig_2s": true,
+      "2s_and_tolerance_agree": true,
+      "class_tolerance_x0_5": "ухудшение",
+      "class_tolerance_x2": "ухудшение"
+    }
+  ]
+}

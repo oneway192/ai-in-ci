@@ -1,0 +1,292 @@
+{
+  "status": "COMPLETE",
+  "variant": 7,
+  "brief": 2,
+  "factor": "steps_1_to_4",
+  "seeds": [
+    101,
+    102,
+    103,
+    104,
+    105
+  ],
+  "hypothesis_recorded_at": "27.10.2026 18:10",
+  "hypothesis": "4 steps instead of 1 increase edge energy and contrast by more than 10 % and time by more than 20 %; CLIP similarity to the English brief changes within ±1.0",
+  "tolerance": {
+    "clip": {
+      "kind": "abs",
+      "value": 1.0
+    },
+    "edge": {
+      "kind": "rel",
+      "value": 0.1
+    },
+    "contrast": {
+      "kind": "rel",
+      "value": 0.1
+    },
+    "seconds": {
+      "kind": "rel",
+      "value": 0.2
+    }
+  },
+  "direction": {
+    "clip": "increase_is_improvement",
+    "edge": "increase_is_deterioration",
+    "contrast": "increase_is_improvement",
+    "seconds": "increase_is_deterioration"
+  },
+  "decision_rule": "4 steps pay off if CLIP is 'improvement' or B passes the layers check while A does not, and CLIP is not 'deterioration'",
+  "models": {
+    "generator": {
+      "model_id": "stabilityai/sd-turbo",
+      "revision": "b261bac6fd2cf515557d5d0707481eafa0485ec2",
+      "dtype": "float16"
+    },
+    "clip": {
+      "model_id": "openai/clip-vit-base-patch32",
+      "revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268"
+    }
+  },
+  "prompt": "square podcast cover about the city environment, abstract layered skyline of geometric shapes, teal and orange palette, minimal flat style, no text, no people",
+  "clip_reference_text": "square podcast cover about the city environment, abstract layered skyline of geometric shapes, teal and orange palette, minimal flat style, no text, no people",
+  "mode_a": {
+    "prompt": "square podcast cover about the city environment, abstract layered skyline of geometric shapes, teal and orange palette, minimal flat style, no text, no people",
+    "steps": 1,
+    "guidance": 0.0,
+    "size": 512
+  },
+  "mode_b": {
+    "prompt": "square podcast cover about the city environment, abstract layered skyline of geometric shapes, teal and orange palette, minimal flat style, no text, no people",
+    "steps": 4,
+    "guidance": 0.0,
+    "size": 512
+  },
+  "changed_fields": [
+    "steps"
+  ],
+  "generator_device": "cpu",
+  "environment": {
+    "execution_environment": "Google Colab",
+    "gpu": "Tesla T4",
+    "cuda_available": true,
+    "cuda_runtime": "13.0",
+    "python": "3.13.16",
+    "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+    "packages": {
+      "torch": "2.11.0+cu130",
+      "diffusers": "0.41.0",
+      "transformers": "5.20.2",
+      "pillow": "11.3.0",
+      "numpy": "2.1.3",
+      "scipy": "1.16.3"
+    },
+    "environment_fixes": [
+      "torchao uninstalled before importing diffusers: ImportError FqnToConfig from torchao.quantization"
+    ],
+    "started_at_utc": "2026-10-27T15:36:30.127299+00:00"
+  },
+  "library_sha256": {
+    "lab05_lib.py": "4eb176506585ffcda1702605a767309fb451808229c3622f80ce882b7fa2ce1a",
+    "lab06_lib.py": "c6d8473cf5a3000f4c27fbdef57916c2fbce347db272928d5c4729472f748bd8",
+    "lab06_demo.py": "6bd455ea028a475f6d21593b6f969446b676a3627ab496fd7f125394361edf4a"
+  },
+  "timings_seconds": {
+    "demo_total": 28.29,
+    "pipe_load": 3.98,
+    "clip_load": 1.96,
+    "variant_summary": 6.5
+  },
+  "metrics": [
+    {
+      "metric": "clip",
+      "A": 34.09651756286621,
+      "s": 1.8300699447248234,
+      "B": 32.65207827091217,
+      "d": -1.4444392919540405,
+      "ratio": 0.7892809212662263,
+      "sig_2s": false
+    },
+    {
+      "metric": "edge",
+      "A": 0.04166556667804523,
+      "s": 0.012644787716159454,
+      "B": 0.06534845860925367,
+      "d": 0.02368289193120844,
+      "ratio": 1.8729370917744077,
+      "sig_2s": false
+    },
+    {
+      "metric": "contrast",
+      "A": 0.1673208147873187,
+      "s": 0.01585064665012859,
+      "B": 0.24628299468556542,
+      "d": 0.07896217989824672,
+      "ratio": 4.981637761611835,
+      "sig_2s": true
+    },
+    {
+      "metric": "seconds",
+      "A": 0.32896186760001456,
+      "s": 0.015394018642295356,
+      "B": 0.5894473083999856,
+      "d": 0.26048544079997105,
+      "ratio": 16.921211208896576,
+      "sig_2s": true
+    }
+  ],
+  "classification": [
+    {
+      "metric": "clip",
+      "change": -1.4444392919540405,
+      "change_kind": "abs",
+      "tolerance": 1.0,
+      "class": "ухудшение",
+      "outside_tolerance": true,
+      "sig_2s": false,
+      "2s_and_tolerance_agree": false,
+      "class_tolerance_x0_5": "ухудшение",
+      "class_tolerance_x2": "нейтрально"
+    },
+    {
+      "metric": "edge",
+      "change": 0.5684044120702582,
+      "change_kind": "rel",
+      "tolerance": 0.1,
+      "class": "ухудшение",
+      "outside_tolerance": true,
+      "sig_2s": false,
+      "2s_and_tolerance_agree": false,
+      "class_tolerance_x0_5": "ухудшение",
+      "class_tolerance_x2": "ухудшение"
+    },
+    {
+      "metric": "contrast",
+      "change": 0.471920842595797,
+      "change_kind": "rel",
+      "tolerance": 0.1,
+      "class": "улучшение",
+      "outside_tolerance": true,
+      "sig_2s": true,
+      "2s_and_tolerance_agree": true,
+      "class_tolerance_x0_5": "улучшение",
+      "class_tolerance_x2": "улучшение"
+    },
+    {
+      "metric": "seconds",
+      "change": 0.7918408376641874,
+      "change_kind": "rel",
+      "tolerance": 0.2,
+      "class": "ухудшение",
+      "outside_tolerance": true,
+      "sig_2s": true,
+      "2s_and_tolerance_agree": true,
+      "class_tolerance_x0_5": "ухудшение",
+      "class_tolerance_x2": "ухудшение"
+    }
+  ],
+  "deterministic_max_abs_diff": {
+    "clip": 0.0,
+    "edge": 0.0,
+    "contrast": 0.0
+  },
+  "comparison_sheet_matches_series": true,
+  "visual_check": {
+    "a_layers_readable": false,
+    "b_layers_readable": false,
+    "seeds_a_readable": 1,
+    "seeds_b_readable": 2,
+    "notes": "A: плотный коллаж из полупрозрачных наложенных фигур с фототекстурой окон, слои сливаются в мозаику; отдельная полоса силуэта видна только на seed 105. B: сплошные заливки и резкие края, ближе к flat style, но здания разбросаны сеткой по всему кадру, а не горизонтальными полосами; полосы читаются на seed 104 и 105, seed 102 превратился в изометрический узор. В B появились цвета вне палитры брифа (жёлтый, тёмно-синий, на seed 103 фиолетовый). Рост энергии границ в B вызван резкими краями заливок и сетками окон, а не шумом."
+  },
+  "pays_off": false,
+  "demo_reproduction": {
+    "rows": [
+      {
+        "metric": "clip",
+        "A": 30.797866582870483,
+        "s": 1.4309017437110398,
+        "B": 30.29200315475464,
+        "d": -0.5058634281158447,
+        "ratio": 0.35352771798564536,
+        "sig_2s": false,
+        "A_ref": 30.796,
+        "B_ref": 30.292,
+        "d_ref": -0.504,
+        "matches_reference": false
+      },
+      {
+        "metric": "edge",
+        "A": 0.045660816369404854,
+        "s": 0.006960480109480653,
+        "B": 0.09197612883167525,
+        "d": 0.04631531246227039,
+        "ratio": 6.654039913020619,
+        "sig_2s": true,
+        "A_ref": 0.0457,
+        "B_ref": 0.092,
+        "d_ref": 0.0463,
+        "matches_reference": true
+      },
+      {
+        "metric": "contrast",
+        "A": 0.1922867990891968,
+        "s": 0.02249353315005205,
+        "B": 0.2778616052724856,
+        "d": 0.0855748061832888,
+        "ratio": 3.804418168209861,
+        "sig_2s": true,
+        "A_ref": 0.1923,
+        "B_ref": 0.2778,
+        "d_ref": 0.0855,
+        "matches_reference": false
+      },
+      {
+        "metric": "seconds",
+        "A": 0.35702238060002855,
+        "s": 0.09228972658274721,
+        "B": 0.625275976399962,
+        "d": 0.26825359579993346,
+        "ratio": 2.906646337925994,
+        "sig_2s": true,
+        "A_ref": 0.2854,
+        "B_ref": 0.5266,
+        "d_ref": 0.2412,
+        "matches_reference": false
+      }
+    ],
+    "intentional_error": {
+      "guidance_1_equals_0_bitwise": true,
+      "psnr_guidance_3_vs_0_db": 11.605078740312596,
+      "psnr_reference_db": 11.6
+    }
+  },
+  "intentional_error": {
+    "description": "guidance_scale = 1.0 expected to enable classifier-free guidance in SD Turbo",
+    "brief": 2,
+    "seed": 101,
+    "steps": 1,
+    "size": 512,
+    "sha256_guidance_0": "acb300686fae836078ea102ea5d9cf26bd65f83196e62db6e9df8ff5d8639889",
+    "sha256_guidance_1": "acb300686fae836078ea102ea5d9cf26bd65f83196e62db6e9df8ff5d8639889",
+    "sha256_guidance_3": "48c9652e2de265efb91214226105b6124b458fddc2de31b02915a7cf8678866d",
+    "guidance_1_equals_0_bitwise": true,
+    "cfg_active": {
+      "0.0": false,
+      "1.0": false,
+      "3.0": true
+    },
+    "psnr_guidance_1_vs_0_db": "inf",
+    "psnr_guidance_3_vs_0_db": 10.885461404351936,
+    "diagnosis": "Diffusers enables CFG only when guidance_scale > 1; values 0..1 do not change the result",
+    "fix": "study guidance only with values > 1 (factor 5 uses 3.0); do not transfer the conclusion to models with regular CFG"
+  },
+  "limitations": [
+    "one model, one brief, one factor, five seeds",
+    "edge energy and contrast measure sharpness and tonal spread, not quality",
+    "CLIP similarity reflects text alignment in CLIP space, not aesthetics; text is truncated to 77 tokens",
+    "generation time depends on GPU state and is not reproduced exactly",
+    "conclusions hold only for SD Turbo at the pinned revision and this environment"
+  ],
+  "license": "SD Turbo: Stability AI Community License Agreement, educational non-commercial use; CLIP: see model card at the pinned revision",
+  "executed_at_utc": "2026-10-27T15:37:23.640770+00:00"
+}

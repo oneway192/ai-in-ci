@@ -1,0 +1,20 @@
+{
+  "description": "guidance_scale = 1.0 expected to enable classifier-free guidance in SD Turbo",
+  "brief": 2,
+  "seed": 101,
+  "steps": 1,
+  "size": 512,
+  "sha256_guidance_0": "acb300686fae836078ea102ea5d9cf26bd65f83196e62db6e9df8ff5d8639889",
+  "sha256_guidance_1": "acb300686fae836078ea102ea5d9cf26bd65f83196e62db6e9df8ff5d8639889",
+  "sha256_guidance_3": "48c9652e2de265efb91214226105b6124b458fddc2de31b02915a7cf8678866d",
+  "guidance_1_equals_0_bitwise": true,
+  "cfg_active": {
+    "0.0": false,
+    "1.0": false,
+    "3.0": true
+  },
+  "psnr_guidance_1_vs_0_db": "inf",
+  "psnr_guidance_3_vs_0_db": 10.885461404351936,
+  "diagnosis": "Diffusers enables CFG only when guidance_scale > 1; values 0..1 do not change the result",
+  "fix": "study guidance only with values > 1 (factor 5 uses 3.0); do not transfer the conclusion to models with regular CFG"
+}

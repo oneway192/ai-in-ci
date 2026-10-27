@@ -1,0 +1,38 @@
+# Первый запуск lab06.ipynb в Google Colab (T4), 27.10.2026.
+# Ячейка с параметрами варианта: import lab05_lib as L -> from diffusers import AutoPipelineForText2Image.
+# Модели ещё не загружались, результатов варианта 7 нет. Traceback сокращён Colab (33 frames).
+
+ImportError                               Traceback (most recent call last)
+/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py in _get_module(self, module_name)
+   1014         try:
+-> 1015             return importlib.import_module("." + module_name, self.__name__)
+   1016         except Exception as e:
+
+33 frames
+
+ImportError: cannot import name 'FqnToConfig' from 'torchao.quantization' (/usr/local/lib/python3.13/dist-packages/torchao/quantization/__init__.py)
+
+The above exception was the direct cause of the following exception:
+
+RuntimeError                              Traceback (most recent call last)
+RuntimeError: Failed to import diffusers.loaders.peft because of the following error (look up to see its traceback):
+cannot import name 'FqnToConfig' from 'torchao.quantization' (/usr/local/lib/python3.13/dist-packages/torchao/quantization/__init__.py)
+
+The above exception was the direct cause of the following exception:
+
+RuntimeError                              Traceback (most recent call last)
+/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py in _get_module(self, module_name)
+   1015             return importlib.import_module("." + module_name, self.__name__)
+   1016         except Exception as e:
+-> 1017             raise RuntimeError(
+   1018                 f"Failed to import {self.__name__}.{module_name} because of the following error (look up to see its"
+   1019                 f" traceback):\n{e}"
+
+RuntimeError: Failed to import diffusers.pipelines.auto_pipeline because of the following error (look up to see its traceback):
+Failed to import diffusers.loaders.peft because of the following error (look up to see its traceback):
+cannot import name 'FqnToConfig' from 'torchao.quantization' (/usr/local/lib/python3.13/dist-packages/torchao/quantization/__init__.py)
+
+# Диагноз: предустановленный в Colab пакет torchao старее, чем ожидает diffusers; diffusers видит torchao
+# установленным и импортирует из него класс FqnToConfig, которого в этой версии нет.
+# Исправление: первой ячейкой ноутбука, до импорта diffusers, выполнить `pip uninstall -y torchao`
+# (SD Turbo и CLIP torchao не используют), затем перезапустить сеанс и выполнить ноутбук заново.

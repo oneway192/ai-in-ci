@@ -1,0 +1,64 @@
+{
+  "variant": 7,
+  "brief": 2,
+  "factor": "steps_1_to_4",
+  "seeds": [
+    101,
+    102,
+    103,
+    104,
+    105
+  ],
+  "mode_a": {
+    "prompt": "square podcast cover about the city environment, abstract layered skyline of geometric shapes, teal and orange palette, minimal flat style, no text, no people",
+    "steps": 1,
+    "guidance": 0.0,
+    "size": 512
+  },
+  "mode_b": {
+    "prompt": "square podcast cover about the city environment, abstract layered skyline of geometric shapes, teal and orange palette, minimal flat style, no text, no people",
+    "steps": 4,
+    "guidance": 0.0,
+    "size": 512
+  },
+  "clip_reference_text": "square podcast cover about the city environment, abstract layered skyline of geometric shapes, teal and orange palette, minimal flat style, no text, no people",
+  "rows": [
+    {
+      "metric": "clip",
+      "A": 34.09651756286621,
+      "s": 1.8300699447248234,
+      "B": 32.65207827091217,
+      "d": -1.4444392919540405,
+      "ratio": 0.7892809212662263,
+      "sig_2s": false
+    },
+    {
+      "metric": "edge",
+      "A": 0.04166556667804523,
+      "s": 0.012644787716159454,
+      "B": 0.06534845860925367,
+      "d": 0.02368289193120844,
+      "ratio": 1.8729370917744077,
+      "sig_2s": false
+    },
+    {
+      "metric": "contrast",
+      "A": 0.1673208147873187,
+      "s": 0.01585064665012859,
+      "B": 0.24628299468556542,
+      "d": 0.07896217989824672,
+      "ratio": 4.981637761611835,
+      "sig_2s": true
+    },
+    {
+      "metric": "seconds",
+      "A": 0.32896186760001456,
+      "s": 0.015394018642295356,
+      "B": 0.5894473083999856,
+      "d": 0.26048544079997105,
+      "ratio": 16.921211208896576,
+      "sig_2s": true
+    }
+  ],
+  "summary_seconds": 6.5
+}
