@@ -30,6 +30,7 @@
 - Без разогрева KL-члена схлопнулся seed 105 (реконструкция 16,88 дБ — уровень эталона «средняя картинка»); с разогревом — ни один.
 - Сэмплы из N(0, I) у обычного автокодировщика — 12,71 дБ; из распределения μ на обучающих сценах — 20,21 дБ; у VAE β = 1 — 22,86 дБ.
 - Демонстрационный вариант 1 воспроизведён в пределах 2s от методички, включая схлопывание seed 102.
+- Дополнительный прогон в Engee 26.10.2-H1 (процессор, PyTorch 2.4.1): демо совпало с методичкой до последнего знака, вариант 7 — с Colab по всем классам; снимки консоли и вывод — в [engee/](engee/).
 
 ## Как повторить
 
@@ -43,7 +44,7 @@
 | Файл или каталог | Содержание |
 | --- | --- |
 | [lab08.ipynb](lab08.ipynb) | выполненный notebook с outputs |
-| [src/](src/) | `lab07_lib.py` (из ЛР07), `lab08_lib.py` и `lab08_demo.py` из комплекта преподавателя без изменений |
+| [src/](src/) | `lab07_lib.py` (из ЛР07), `lab08_lib.py` и `lab08_demo.py` из комплекта преподавателя без изменений; `lab08_variant07.py` — `lab08_demo.py` с `N = 7` для запуска в Engee |
 | [configs/run_config.json](configs/run_config.json) | параметры варианта, допуски и направления классификации |
 | [artifacts/metrics.json](artifacts/metrics.json), [artifacts/per_seed_metrics.csv](artifacts/per_seed_metrics.csv) | таблица `variant_summary` и метрики каждого обучения |
 | [artifacts/classification.json](artifacts/classification.json) | классификация по допуску, сравнение с 2s, чувствительность |
@@ -53,6 +54,7 @@
 | [artifacts/comparison.png](artifacts/comparison.png), [artifacts/path_endpoints.png](artifacts/path_endpoints.png), [artifacts/path_factors.csv](artifacts/path_factors.csv) | лист сравнения, концы пути интерполяции и их факторы |
 | [artifacts/demo/](artifacts/demo/) | воспроизведение демо-варианта: вывод, сверка с методичкой, лист сравнения |
 | [artifacts/passport.json](artifacts/passport.json) | паспорт эксперимента со статусом `COMPLETE` |
+| [engee/](engee/) | прогон в Engee: вывод демо и варианта 7, листы сравнения, снимки консоли, среда, сверка с Colab |
 | [reports/report.md](reports/report.md) | полный отчёт; [PDF](reports/report.pdf) и [DOCX](reports/report.docx) — для сдачи |
 | [reports/journal.md](reports/journal.md) | журнал: гипотеза до запуска, прогон, результаты |
 | [reports/environment.txt](reports/environment.txt) | фактическая среда |
