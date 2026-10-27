@@ -1,0 +1,36 @@
+{
+  "variant": 7,
+  "dataset": 2,
+  "dataset_kind": "disc_rect",
+  "dataset_factors": 4,
+  "factor": 1,
+  "factor_name": "latent_8_to_2",
+  "context_index_c": 1,
+  "factor_index_k": 0,
+  "seeds": [101, 102, 103, 104, 105],
+  "data_seed": 7,
+  "n_train": 4096,
+  "n_test": 1024,
+  "mode_a": {"arch": "conv", "d": 8, "loss": "mse", "noise": 0.0, "eval_noise": 0.0, "n_train": 4096, "epochs": 20},
+  "mode_b": {"arch": "conv", "d": 2, "loss": "mse", "noise": 0.0, "eval_noise": 0.0, "n_train": 4096, "epochs": 20},
+  "optimizer": {"name": "Adam", "lr": 0.002, "batch": 128},
+  "tolerance": {
+    "psnr": {"kind": "abs", "value": 1.0, "unit": "dB"},
+    "gap": {"kind": "abs", "value": 0.1, "unit": "dB"},
+    "seconds": {"kind": "rel", "value": 0.20}
+  },
+  "direction": {
+    "psnr": "increase_is_improvement",
+    "gap": "increase_is_deterioration",
+    "seconds": "increase_is_deterioration"
+  },
+  "params": "deterministic capacity, reported without tolerance class",
+  "significance_criterion": "abs(d) > 2 * s_A",
+  "latent_sweep": {"d": [1, 2, 3, 4, 8], "seeds": [101, 102, 103]},
+  "comparison_sheet": {"seed": 101, "test_scenes": 8},
+  "library_sha256": {
+    "lab07_lib.py": "d84b83a878f55e95289d76a788dc9fa84d3249d0d33aa719d9db8d6792fd2698",
+    "lab07_demo.py": "fce7924908adbef63dd5808a800a3c9f5b96c137dc9ebf9d398fc2eb613d95fa"
+  },
+  "hypothesis_recorded_at": "27.10.2026 19:05"
+}

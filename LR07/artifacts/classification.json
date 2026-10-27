@@ -1,0 +1,43 @@
+{
+  "variant": 7,
+  "rows": [
+    {
+      "metric": "psnr",
+      "change": -5.589849090576173,
+      "change_kind": "abs",
+      "tolerance": 1.0,
+      "class": "ухудшение",
+      "sig_2s": true,
+      "2s_and_tolerance_agree": true,
+      "class_tolerance_x0_5": "ухудшение",
+      "class_tolerance_x2": "ухудшение"
+    },
+    {
+      "metric": "gap",
+      "change": -0.042943572998046874,
+      "change_kind": "abs",
+      "tolerance": 0.1,
+      "class": "нейтрально",
+      "sig_2s": true,
+      "2s_and_tolerance_agree": false,
+      "class_tolerance_x0_5": "нейтрально",
+      "class_tolerance_x2": "нейтрально"
+    },
+    {
+      "metric": "seconds",
+      "change": -0.009682381448744597,
+      "change_kind": "rel",
+      "tolerance": 0.2,
+      "class": "нейтрально",
+      "sig_2s": false,
+      "2s_and_tolerance_agree": true,
+      "class_tolerance_x0_5": "нейтрально",
+      "class_tolerance_x2": "нейтрально"
+    }
+  ],
+  "params_change": {
+    "A_thousand": 101.035,
+    "B_thousand": 88.741,
+    "relative": -0.12168060573068736
+  }
+}

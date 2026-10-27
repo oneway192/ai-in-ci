@@ -1,0 +1,20 @@
+{
+  "symptom": "PSNR of mode B (d = 2) looks high in absolute terms, so two latent numbers seem enough",
+  "psnr_b": 20.60317916870117,
+  "psnr_a": 26.193028259277344,
+  "baseline_psnr": 16.892166137695312,
+  "gain_b_db": 3.7110130310058587,
+  "gain_a_db": 9.300862121582032,
+  "share_of_a_gain_kept_by_b": 0.39899667175956727,
+  "sweep_mean_psnr": {
+    "1": 19.417259216308594,
+    "2": 20.603601455688477,
+    "3": 22.077481587727863,
+    "4": 22.98011652628581,
+    "8": 26.01067352294922
+  },
+  "sweep_best_d": 8,
+  "scene_factors": 4,
+  "diagnosis": "PSNR is meaningful only relative to the mean-image baseline; d below the number of scene factors loses information by construction",
+  "fix": "report the gain over the baseline and choose d by a sweep, evaluated on the test set"
+}

@@ -1,0 +1,91 @@
+{
+  "variant": 1,
+  "factor": "latent_8_to_2",
+  "rows": [
+    {
+      "metric": "psnr",
+      "A": 26.012066650390626,
+      "s": 0.6924915762781473,
+      "B": 23.19237289428711,
+      "d": -2.819693756103515,
+      "ratio": 4.071809466994805,
+      "sig_2s": true,
+      "A_ref": 26.0,
+      "s_ref": 0.71,
+      "B_ref": 23.2,
+      "d_ref": -2.8,
+      "A_within_2s_ref": true,
+      "B_within_2s_ref": true
+    },
+    {
+      "metric": "gap",
+      "A": 0.03416938781738281,
+      "s": 0.015502050470591675,
+      "B": 0.09735527038574218,
+      "d": 0.06318588256835937,
+      "ratio": 4.075969349230723,
+      "sig_2s": true,
+      "A_ref": 0.04,
+      "s_ref": 0.013,
+      "B_ref": 0.101,
+      "d_ref": 0.061,
+      "A_within_2s_ref": true,
+      "B_within_2s_ref": true
+    },
+    {
+      "metric": "params",
+      "A": 101.035,
+      "s": 0.0,
+      "B": 88.741,
+      "d": -12.293999999999997,
+      "ratio": "inf",
+      "sig_2s": true,
+      "A_ref": 101.0,
+      "s_ref": 0.0,
+      "B_ref": 88.7,
+      "d_ref": -12.3,
+      "A_within_2s_ref": true,
+      "B_within_2s_ref": true
+    },
+    {
+      "metric": "seconds",
+      "A": 1.9686804863999896,
+      "s": 0.09343571999667924,
+      "B": 1.9093337693999957,
+      "d": -0.05934671699999394,
+      "ratio": 0.6351609106464119,
+      "sig_2s": false,
+      "A_ref": 2.27,
+      "s_ref": 0.28,
+      "B_ref": 2.1,
+      "d_ref": -0.17,
+      "A_within_2s_ref": false,
+      "B_within_2s_ref": false
+    }
+  ],
+  "baseline_psnr": 17.171,
+  "baseline_reference": 17.171,
+  "sweep": {
+    "1": {
+      "psnr": 20.64,
+      "reference": 20.64
+    },
+    "2": {
+      "psnr": 23.16,
+      "reference": 23.16
+    },
+    "3": {
+      "psnr": 25.21,
+      "reference": 25.24
+    },
+    "4": {
+      "psnr": 26.46,
+      "reference": 26.45
+    },
+    "8": {
+      "psnr": 25.77,
+      "reference": 25.7
+    }
+  },
+  "demo_seconds": 68.1
+}
