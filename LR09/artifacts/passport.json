@@ -1,0 +1,438 @@
+{
+  "status": "COMPLETE",
+  "variant": 7,
+  "context": 2,
+  "element": 1,
+  "factor": "style",
+  "hypothesis_recorded_at": "06.11.2026 16:35",
+  "hypotheses": {
+    "H1": "clip_target grows by more than 2s and more than 1.0",
+    "H2": "clip_subject does not fall by more than 1.0",
+    "H3": "edge grows by more than 10 %, contrast changes within ±10 %",
+    "H4": "horizon layers read as bands on B more often than on A",
+    "H5": "K1, K2, K3 are at least 0.8 for all approaches",
+    "H6": "K4 is highest for few-shot and lowest for step-by-step"
+  },
+  "tolerance": {
+    "clip_target": {
+      "kind": "abs",
+      "value": 1.0
+    },
+    "clip_subject": {
+      "kind": "abs",
+      "value": 1.0
+    },
+    "edge": {
+      "kind": "rel",
+      "value": 0.1
+    },
+    "contrast": {
+      "kind": "rel",
+      "value": 0.1
+    }
+  },
+  "part_1": {
+    "model": {
+      "model_id": "stabilityai/sd-turbo",
+      "revision": "b261bac6fd2cf515557d5d0707481eafa0485ec2"
+    },
+    "clip": {
+      "model_id": "openai/clip-vit-large-patch14",
+      "revision": "32bd64288804d66eefd0ccbe215aa642df71cc41"
+    },
+    "prompt_a": "podcast cover about the city",
+    "prompt_b": "podcast cover about the city, minimal flat geometric style",
+    "clip_target_text": "minimal flat geometric style",
+    "seeds": [
+      101,
+      102,
+      103,
+      104,
+      105
+    ],
+    "parameters": {
+      "steps": 1,
+      "guidance_scale": 0.0,
+      "size": 512,
+      "dtype": "float32",
+      "device": "cpu",
+      "generator_device": "cpu"
+    },
+    "metrics": [
+      {
+        "metric": "clip_target",
+        "A": 10.727791041135788,
+        "s": 2.232356654134999,
+        "B": 14.93747591972351,
+        "d": 4.209684878587723,
+        "ratio": 1.885758205701636,
+        "sig_2s": false
+      },
+      {
+        "metric": "clip_subject",
+        "A": 23.856433629989624,
+        "s": 0.8379525046206606,
+        "B": 22.80397266149521,
+        "d": -1.0524609684944153,
+        "ratio": 1.255991196029496,
+        "sig_2s": false
+      },
+      {
+        "metric": "edge",
+        "A": 0.06065818478331828,
+        "s": 0.005360388442298842,
+        "B": 0.0675181355812265,
+        "d": 0.006859950797908222,
+        "ratio": 1.2797488226368687,
+        "sig_2s": false
+      },
+      {
+        "metric": "contrast",
+        "A": 0.1906825803950758,
+        "s": 0.015008131723416534,
+        "B": 0.2233170194993364,
+        "d": 0.032634439104260615,
+        "ratio": 2.1744504716294912,
+        "sig_2s": true
+      }
+    ],
+    "classification": [
+      {
+        "metric": "clip_target",
+        "change": 4.209684878587723,
+        "change_kind": "abs",
+        "tolerance": 1.0,
+        "sig_2s": false,
+        "over_tolerance": true,
+        "class": "только практически важно",
+        "over_tolerance_x0_5": true,
+        "over_tolerance_x2": true
+      },
+      {
+        "metric": "clip_subject",
+        "change": -1.0524609684944153,
+        "change_kind": "abs",
+        "tolerance": 1.0,
+        "sig_2s": false,
+        "over_tolerance": true,
+        "class": "только практически важно",
+        "over_tolerance_x0_5": true,
+        "over_tolerance_x2": false
+      },
+      {
+        "metric": "edge",
+        "change": 0.11309192357821413,
+        "change_kind": "rel",
+        "tolerance": 0.1,
+        "sig_2s": false,
+        "over_tolerance": true,
+        "class": "только практически важно",
+        "over_tolerance_x0_5": true,
+        "over_tolerance_x2": false
+      },
+      {
+        "metric": "contrast",
+        "change": 0.17114536124194055,
+        "change_kind": "rel",
+        "tolerance": 0.1,
+        "sig_2s": true,
+        "over_tolerance": true,
+        "class": "значимо и практически важно",
+        "over_tolerance_x0_5": true,
+        "over_tolerance_x2": false
+      }
+    ],
+    "visual_check": {
+      "a_bands_seed101": false,
+      "b_bands_seed101": true,
+      "seeds_a_bands": 0,
+      "seeds_b_bands": 4,
+      "notes": "A: почти фотографические панорамы и улицы в перспективе, здания сливаются в плотную массу, отдельных полос нет ни на одном seed. B: плоская стилизованная иллюстрация с чёткими цветовыми блоками; ярусы горизонта читаются на seed 101, 102, 104 и 105, на seed 103 плотный узор с круглой эмблемой в центре. Стиль B не чистый минимализм: много мелких деталей, круглые фигуры и вывески. Артефакты: буквоподобные надписи на A seed 102 и A seed 105 и мелкие знаки внизу B seed 105, хотя текста в запросе не было. Изображения синтетические и не являются фотографией города."
+    },
+    "demo_reproduction": [
+      {
+        "metric": "clip_target",
+        "A": 12.043532580137253,
+        "s": 2.801966434826376,
+        "B": 16.725192964076996,
+        "d": 4.681660383939743,
+        "ratio": 1.67084813213683,
+        "sig_2s": false,
+        "A_ref": 12.1,
+        "s_ref": 2.8,
+        "B_ref": 16.71,
+        "d_ref": 4.61,
+        "A_within_2s_ref": true,
+        "B_within_2s_ref": true
+      },
+      {
+        "metric": "clip_subject",
+        "A": 25.221850275993347,
+        "s": 1.8336811038618464,
+        "B": 25.643682181835175,
+        "d": 0.4218319058418274,
+        "ratio": 0.23004649224634707,
+        "sig_2s": false,
+        "A_ref": 25.24,
+        "s_ref": 1.78,
+        "B_ref": 25.65,
+        "d_ref": 0.4,
+        "A_within_2s_ref": true,
+        "B_within_2s_ref": true
+      },
+      {
+        "metric": "edge",
+        "A": 0.03745066530404571,
+        "s": 0.002478395607104417,
+        "B": 0.04430626806893624,
+        "d": 0.006855602764890528,
+        "ratio": 2.766145463314524,
+        "sig_2s": true,
+        "A_ref": 0.0375,
+        "s_ref": 0.0025,
+        "B_ref": 0.0443,
+        "d_ref": 0.0069,
+        "A_within_2s_ref": true,
+        "B_within_2s_ref": true
+      },
+      {
+        "metric": "contrast",
+        "A": 0.18076945444611472,
+        "s": 0.005646495310367898,
+        "B": 0.17342689727679148,
+        "d": -0.007342557169323249,
+        "ratio": 1.3003742615071516,
+        "sig_2s": false,
+        "A_ref": 0.1808,
+        "s_ref": 0.0056,
+        "B_ref": 0.1734,
+        "d_ref": -0.0073,
+        "A_within_2s_ref": true,
+        "B_within_2s_ref": true
+      }
+    ]
+  },
+  "part_2": {
+    "llm": {
+      "service": "Perplexity, web version",
+      "account": "free",
+      "mode": "default mode, model not selected (model list is locked on the free plan)",
+      "model": "unknown: the interface does not show the model name",
+      "how_mode_was_determined": "from the model menu of the web interface",
+      "conditions": "search disabled by the prompt text; every repeat in a new chat without history",
+      "date": "06.11.2026"
+    },
+    "repeats": 3,
+    "new_chat_per_repeat": true,
+    "context": 2,
+    "rows": [
+      {
+        "approach": "zero",
+        "name": "zero-shot",
+        "k1": 1.0,
+        "k2": 1.0,
+        "k3": 1.0,
+        "k4": 0.9333333333333333
+      },
+      {
+        "approach": "few",
+        "name": "few-shot",
+        "k1": 1.0,
+        "k2": 1.0,
+        "k3": 1.0,
+        "k4": 0.9333333333333333
+      },
+      {
+        "approach": "step",
+        "name": "пошаговые инструкции",
+        "k1": 1.0,
+        "k2": 1.0,
+        "k3": 1.0,
+        "k4": 0.9333333333333333
+      }
+    ],
+    "per_file": [
+      {
+        "file": "answers/ctx2_zero_r1.txt",
+        "k1": 1.0,
+        "k2": 1.0,
+        "k3": 1.0,
+        "parsed": true,
+        "n": 5,
+        "errors": []
+      },
+      {
+        "file": "answers/ctx2_zero_r2.txt",
+        "k1": 1.0,
+        "k2": 1.0,
+        "k3": 1.0,
+        "parsed": true,
+        "n": 5,
+        "errors": []
+      },
+      {
+        "file": "answers/ctx2_zero_r3.txt",
+        "k1": 1.0,
+        "k2": 1.0,
+        "k3": 1.0,
+        "parsed": true,
+        "n": 5,
+        "errors": []
+      },
+      {
+        "file": "answers/ctx2_few_r1.txt",
+        "k1": 1.0,
+        "k2": 1.0,
+        "k3": 1.0,
+        "parsed": true,
+        "n": 5,
+        "errors": []
+      },
+      {
+        "file": "answers/ctx2_few_r2.txt",
+        "k1": 1.0,
+        "k2": 1.0,
+        "k3": 1.0,
+        "parsed": true,
+        "n": 5,
+        "errors": []
+      },
+      {
+        "file": "answers/ctx2_few_r3.txt",
+        "k1": 1.0,
+        "k2": 1.0,
+        "k3": 1.0,
+        "parsed": true,
+        "n": 5,
+        "errors": []
+      },
+      {
+        "file": "answers/ctx2_step_r1.txt",
+        "k1": 1.0,
+        "k2": 1.0,
+        "k3": 1.0,
+        "parsed": true,
+        "n": 5,
+        "errors": []
+      },
+      {
+        "file": "answers/ctx2_step_r2.txt",
+        "k1": 1.0,
+        "k2": 1.0,
+        "k3": 1.0,
+        "parsed": true,
+        "n": 5,
+        "errors": []
+      },
+      {
+        "file": "answers/ctx2_step_r3.txt",
+        "k1": 1.0,
+        "k2": 1.0,
+        "k3": 1.0,
+        "parsed": true,
+        "n": 5,
+        "errors": []
+      }
+    ],
+    "error_demo": {
+      "file": "answers/ctx2_error_old_prompt.txt",
+      "k1": 0.4,
+      "k2": 1.0,
+      "k3": 1.0,
+      "errors": [
+        "объект 1: palette: 1–3 цвета из списка",
+        "объект 2: palette: 1–3 цвета из списка",
+        "объект 5: palette: 1–3 цвета из списка"
+      ],
+      "diagnosis": "the prompt had no closed colour list, so the check measures a rule that was not requested"
+    }
+  },
+  "intentional_error": {
+    "part_1_one_seed": {
+      "description": "conclusion about clip_target drawn from one seed only",
+      "by_seed": {
+        "101": {
+          "A": 14.620749652385712,
+          "B": 14.389094710350037,
+          "d": -0.23165494203567505
+        },
+        "102": {
+          "A": 9.818774461746216,
+          "B": 16.77442044019699,
+          "d": 6.955645978450775
+        },
+        "103": {
+          "A": 10.505572706460953,
+          "B": 13.416524231433868,
+          "d": 2.9109515249729156
+        },
+        "104": {
+          "A": 9.558219462633133,
+          "B": 15.407860279083252,
+          "d": 5.849640816450119
+        },
+        "105": {
+          "A": 9.135638922452927,
+          "B": 14.699479937553406,
+          "d": 5.563841015100479
+        }
+      },
+      "d_min": -0.23165494203567505,
+      "d_max": 6.955645978450775,
+      "s_A": 2.232356654134999,
+      "d_seed_101_vs_2s": false,
+      "seeds_with_positive_d": 4,
+      "fix": "five seeds, mean, s and the 2s criterion"
+    },
+    "part_2_rule_not_in_prompt": {
+      "file": "answers/ctx2_error_old_prompt.txt",
+      "k1": 0.4,
+      "k2": 1.0,
+      "k3": 1.0,
+      "errors": [
+        "объект 1: palette: 1–3 цвета из списка",
+        "объект 2: palette: 1–3 цвета из списка",
+        "объект 5: palette: 1–3 цвета из списка"
+      ],
+      "diagnosis": "the prompt had no closed colour list, so the check measures a rule that was not requested"
+    }
+  },
+  "environment": {
+    "execution_environment": "Google Colab",
+    "device": "cpu",
+    "cuda_available": false,
+    "python": "3.13.18",
+    "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+    "packages": {
+      "torch": "2.11.0+cpu",
+      "diffusers": "0.42.1",
+      "transformers": "5.22.0",
+      "numpy": "2.4.6",
+      "scipy": "1.16.3",
+      "pillow": "11.3.0"
+    },
+    "environment_fixes": [
+      "torchao uninstalled before importing diffusers: incompatible with the installed diffusers"
+    ],
+    "started_at_utc": "2026-11-06T14:13:06.997154+00:00"
+  },
+  "library_sha256": {
+    "lab09_lib.py": "cc4d233de574e47a73d2126234ee0b8e9f5d80aa0ed6d4a2fac9748ac0f7b062",
+    "lab09_llm.py": "8e9d3fb3ccbdc5713b85135b54e689c567f6df2b555dcf2d0634581830d163a3"
+  },
+  "timings_seconds": {
+    "pipe_load": 61.4,
+    "clip_load": 25.5,
+    "demo_variant": 858.1,
+    "variant_summary": 831.2,
+    "image_mean": 69.8
+  },
+  "limitations": [
+    "one run, one model, one context, one added element, five seeds; s is estimated from five values of mode A",
+    "CLIP similarity measures text alignment, not quality",
+    "library versions in Colab are newer than those checked in the methodology",
+    "one language model service on one date; three repeats, 30 non-independent comparisons per approach"
+  ],
+  "license": "SD Turbo: Stability AI Community License Agreement, educational non-commercial use; CLIP: see model card at the pinned revision; synthetic prompts and customer descriptions",
+  "executed_at_utc": "2026-11-06T14:58:22.560454+00:00"
+}

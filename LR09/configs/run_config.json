@@ -1,0 +1,74 @@
+{
+  "variant": 7,
+  "context": 2,
+  "element": 1,
+  "factor_name": "style",
+  "context_index_c": 1,
+  "factor_index_k": 0,
+  "part_1": {
+    "prompt_a": "podcast cover about the city",
+    "prompt_b": "podcast cover about the city, minimal flat geometric style",
+    "clip_target_text": "minimal flat geometric style",
+    "clip_subject_text": "podcast cover about the city",
+    "seeds": [
+      101,
+      102,
+      103,
+      104,
+      105
+    ],
+    "model_id": "stabilityai/sd-turbo",
+    "revision": "b261bac6fd2cf515557d5d0707481eafa0485ec2",
+    "clip_id": "openai/clip-vit-large-patch14",
+    "clip_revision": "32bd64288804d66eefd0ccbe215aa642df71cc41",
+    "steps": 1,
+    "guidance_scale": 0.0,
+    "size": 512,
+    "dtype": "float32",
+    "device": "cpu",
+    "generator_device": "cpu",
+    "tolerance": {
+      "clip_target": {
+        "kind": "abs",
+        "value": 1.0
+      },
+      "clip_subject": {
+        "kind": "abs",
+        "value": 1.0
+      },
+      "edge": {
+        "kind": "rel",
+        "value": 0.1
+      },
+      "contrast": {
+        "kind": "rel",
+        "value": 0.1
+      }
+    },
+    "significance_criterion": "abs(d) > 2 * s_A"
+  },
+  "part_2": {
+    "approaches": [
+      "zero",
+      "few",
+      "step"
+    ],
+    "repeats": 3,
+    "new_chat_per_repeat": true,
+    "context": 2,
+    "criteria": [
+      "K1",
+      "K2",
+      "K3",
+      "K4"
+    ],
+    "answer_files": "answers/ctx2_<approach>_r<repeat>.txt",
+    "error_demo_prompt": "prompts/ctx2_error_no_color_list.txt"
+  },
+  "library_sha256": {
+    "lab09_lib.py": "cc4d233de574e47a73d2126234ee0b8e9f5d80aa0ed6d4a2fac9748ac0f7b062",
+    "lab09_llm.py": "5eabb31fd8ba76f103020177acfb04cdb2127352cbddf22e67f2c0b4835abcb5",
+    "lab09_llm.py_text_with_lf": "8e9d3fb3ccbdc5713b85135b54e689c567f6df2b555dcf2d0634581830d163a3"
+  },
+  "hypothesis_recorded_at": "06.11.2026 16:35"
+}

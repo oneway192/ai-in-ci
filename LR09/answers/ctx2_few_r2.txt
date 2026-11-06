@@ -1,0 +1,49 @@
+```json
+[
+  {
+    "subject": "layered city skyline made of geometric shapes",
+    "setting": "minimal urban backdrop",
+    "style": "minimal geometric",
+    "lighting": "soft even light",
+    "palette": ["teal", "orange"],
+    "composition": "centered",
+    "avoid": []
+  },
+  {
+    "subject": "nighttime city skyline with illuminated windows",
+    "setting": "rooftop viewpoint beneath a dark sky",
+    "style": "photorealistic",
+    "lighting": "cool window glow",
+    "palette": ["blue", "black", "white"],
+    "composition": "rule of thirds",
+    "avoid": []
+  },
+  {
+    "subject": "bicycle lanes and public transit vehicles",
+    "setting": "bright city streets",
+    "style": "flat vector illustration",
+    "lighting": "bright daylight",
+    "palette": ["blue", "yellow", "green"],
+    "composition": "rule of thirds",
+    "avoid": ["people"]
+  },
+  {
+    "subject": "urban courtyards and buildings with green roofs",
+    "setting": "residential city blocks",
+    "style": "flat vector illustration",
+    "lighting": "warm morning light",
+    "palette": ["green", "yellow"],
+    "composition": "top-down",
+    "avoid": []
+  },
+  {
+    "subject": "brick facades in an old neighborhood",
+    "setting": "historic neighborhood street at sunset",
+    "style": "watercolor",
+    "lighting": "warm sunset light",
+    "palette": ["red", "orange", "purple"],
+    "composition": "rule of thirds",
+    "avoid": []
+  }
+]
+```

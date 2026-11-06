@@ -1,0 +1,54 @@
+{
+  "variant": 7,
+  "context": 2,
+  "element": 1,
+  "prompt_a": "podcast cover about the city",
+  "prompt_b": "podcast cover about the city, minimal flat geometric style",
+  "clip_target_text": "minimal flat geometric style",
+  "seeds": [
+    101,
+    102,
+    103,
+    104,
+    105
+  ],
+  "rows": [
+    {
+      "metric": "clip_target",
+      "A": 10.727791041135788,
+      "s": 2.232356654134999,
+      "B": 14.93747591972351,
+      "d": 4.209684878587723,
+      "ratio": 1.885758205701636,
+      "sig_2s": false
+    },
+    {
+      "metric": "clip_subject",
+      "A": 23.856433629989624,
+      "s": 0.8379525046206606,
+      "B": 22.80397266149521,
+      "d": -1.0524609684944153,
+      "ratio": 1.255991196029496,
+      "sig_2s": false
+    },
+    {
+      "metric": "edge",
+      "A": 0.06065818478331828,
+      "s": 0.005360388442298842,
+      "B": 0.0675181355812265,
+      "d": 0.006859950797908222,
+      "ratio": 1.2797488226368687,
+      "sig_2s": false
+    },
+    {
+      "metric": "contrast",
+      "A": 0.1906825803950758,
+      "s": 0.015008131723416534,
+      "B": 0.2233170194993364,
+      "d": 0.032634439104260615,
+      "ratio": 2.1744504716294912,
+      "sig_2s": true
+    }
+  ],
+  "summary_seconds": 831.2
+}

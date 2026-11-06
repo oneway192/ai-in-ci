@@ -1,0 +1,50 @@
+{
+  "part_1_one_seed": {
+    "description": "conclusion about clip_target drawn from one seed only",
+    "by_seed": {
+      "101": {
+        "A": 14.620749652385712,
+        "B": 14.389094710350037,
+        "d": -0.23165494203567505
+      },
+      "102": {
+        "A": 9.818774461746216,
+        "B": 16.77442044019699,
+        "d": 6.955645978450775
+      },
+      "103": {
+        "A": 10.505572706460953,
+        "B": 13.416524231433868,
+        "d": 2.9109515249729156
+      },
+      "104": {
+        "A": 9.558219462633133,
+        "B": 15.407860279083252,
+        "d": 5.849640816450119
+      },
+      "105": {
+        "A": 9.135638922452927,
+        "B": 14.699479937553406,
+        "d": 5.563841015100479
+      }
+    },
+    "d_min": -0.23165494203567505,
+    "d_max": 6.955645978450775,
+    "s_A": 2.232356654134999,
+    "d_seed_101_vs_2s": false,
+    "seeds_with_positive_d": 4,
+    "fix": "five seeds, mean, s and the 2s criterion"
+  },
+  "part_2_rule_not_in_prompt": {
+    "file": "answers/ctx2_error_old_prompt.txt",
+    "k1": 0.4,
+    "k2": 1.0,
+    "k3": 1.0,
+    "errors": [
+      "объект 1: palette: 1–3 цвета из списка",
+      "объект 2: palette: 1–3 цвета из списка",
+      "объект 5: palette: 1–3 цвета из списка"
+    ],
+    "diagnosis": "the prompt had no closed colour list, so the check measures a rule that was not requested"
+  }
+}

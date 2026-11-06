@@ -1,0 +1,9 @@
+{
+  "service": "Perplexity, web version",
+  "account": "free",
+  "mode": "default mode, model not selected (model list is locked on the free plan)",
+  "model": "unknown: the interface does not show the model name",
+  "how_mode_was_determined": "from the model menu of the web interface",
+  "conditions": "search disabled by the prompt text; every repeat in a new chat without history",
+  "date": "06.11.2026"
+}

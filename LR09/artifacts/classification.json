@@ -1,0 +1,49 @@
+{
+  "variant": 7,
+  "rows": [
+    {
+      "metric": "clip_target",
+      "change": 4.209684878587723,
+      "change_kind": "abs",
+      "tolerance": 1.0,
+      "sig_2s": false,
+      "over_tolerance": true,
+      "class": "только практически важно",
+      "over_tolerance_x0_5": true,
+      "over_tolerance_x2": true
+    },
+    {
+      "metric": "clip_subject",
+      "change": -1.0524609684944153,
+      "change_kind": "abs",
+      "tolerance": 1.0,
+      "sig_2s": false,
+      "over_tolerance": true,
+      "class": "только практически важно",
+      "over_tolerance_x0_5": true,
+      "over_tolerance_x2": false
+    },
+    {
+      "metric": "edge",
+      "change": 0.11309192357821413,
+      "change_kind": "rel",
+      "tolerance": 0.1,
+      "sig_2s": false,
+      "over_tolerance": true,
+      "class": "только практически важно",
+      "over_tolerance_x0_5": true,
+      "over_tolerance_x2": false
+    },
+    {
+      "metric": "contrast",
+      "change": 0.17114536124194055,
+      "change_kind": "rel",
+      "tolerance": 0.1,
+      "sig_2s": true,
+      "over_tolerance": true,
+      "class": "значимо и практически важно",
+      "over_tolerance_x0_5": true,
+      "over_tolerance_x2": false
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+Ключевые **элементы**:
+
+1. Предмет: слоистый городской силуэт из геометрических фигур; стиль: минималистичная геометрия; цвета: бирюзовый и оранжевый; формат: квадратный; прямых запретов нет.
+2. Предмет: ночной город с огнями окон, вид с крыши; стиль: фотореализм; цвета: синий, жёлтый и чёрный; ограничения: исключить оранжевый и янтарный.
+3. Предмет: велодорожки и общественный транспорт; стиль: яркая плоская иллюстрация; цвета: синий, зелёный и жёлтый; ограничения: без людей.
+4. Предмет: дворы и зелёные крыши, вид сверху; стиль: плоская иллюстрация; освещение: тёплое утро; цвета: ровно зелёный и жёлтый; прямых запретов нет.
+5. Предмет: кирпичные фасады старого района; стиль: акварель; освещение: закатное; цвета: красный, оранжевый и янтарный; прямых запретов нет.
+
+```json
+[
+  {
+    "subject": "Layered city skyline built from geometric shapes",
+    "setting": "Square podcast cover background",
+    "style": "minimal geometric",
+    "lighting": "Even soft lighting",
+    "palette": ["teal", "orange"],
+    "composition": "centered",
+    "avoid": []
+  },
+  {
+    "subject": "Nighttime city skyline with illuminated windows",
+    "setting": "Rooftop viewpoint beneath a dark sky",
+    "style": "photorealistic",
+    "lighting": "Cool night with glowing windows",
+    "palette": ["blue", "yellow", "black"],
+    "composition": "rule of thirds",
+    "avoid": []
+  },
+  {
+    "subject": "Bicycle lanes and public transit vehicles",
+    "setting": "Bright urban streets",
+    "style": "flat vector illustration",
+    "lighting": "Bright daylight",
+    "palette": ["blue", "green", "yellow"],
+    "composition": "rule of thirds",
+    "avoid": ["people"]
+  },
+  {
+    "subject": "Urban courtyards and lush green rooftops",
+    "setting": "Residential city blocks",
+    "style": "flat vector illustration",
+    "lighting": "Warm morning light",
+    "palette": ["green", "yellow"],
+    "composition": "top-down",
+    "avoid": []
+  },
+  {
+    "subject": "Old neighborhood buildings with brick facades",
+    "setting": "Historic neighborhood street",
+    "style": "watercolor",
+    "lighting": "Warm sunset light",
+    "palette": ["red", "orange", "amber"],
+    "composition": "rule of thirds",
+    "avoid": []
+  }
+]
+```

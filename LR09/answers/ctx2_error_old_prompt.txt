@@ -1,0 +1,49 @@
+```json
+[
+  {
+    "subject": "Layered city skyline built from geometric shapes",
+    "setting": "Square podcast cover background",
+    "style": "minimal geometric",
+    "lighting": "Even diffuse lighting",
+    "palette": ["turquoise", "orange"],
+    "composition": "centered",
+    "avoid": []
+  },
+  {
+    "subject": "Nighttime city skyline with glowing windows",
+    "setting": "Rooftop overlooking the city beneath a dark sky",
+    "style": "photorealistic",
+    "lighting": "Cool window lights at night",
+    "palette": ["navy blue", "cool white", "cyan"],
+    "composition": "rule of thirds",
+    "avoid": []
+  },
+  {
+    "subject": "Bicycle lanes and public transit vehicles",
+    "setting": "Bright urban streets",
+    "style": "flat vector illustration",
+    "lighting": "Bright daylight",
+    "palette": ["blue", "yellow", "green"],
+    "composition": "rule of thirds",
+    "avoid": ["people"]
+  },
+  {
+    "subject": "Urban courtyards and green rooftops",
+    "setting": "Residential city blocks",
+    "style": "flat vector illustration",
+    "lighting": "Warm morning light",
+    "palette": ["green", "yellow"],
+    "composition": "top-down",
+    "avoid": []
+  },
+  {
+    "subject": "Brick facades of an old neighborhood",
+    "setting": "Historic neighborhood street",
+    "style": "watercolor",
+    "lighting": "Warm sunset light",
+    "palette": ["brick red", "gold", "ochre"],
+    "composition": "rule of thirds",
+    "avoid": []
+  }
+]
+```

@@ -1,0 +1,124 @@
+{
+  "context": 2,
+  "rows": [
+    {
+      "approach": "zero",
+      "name": "zero-shot",
+      "k1": 1.0,
+      "k2": 1.0,
+      "k3": 1.0,
+      "k4": 0.9333333333333333
+    },
+    {
+      "approach": "few",
+      "name": "few-shot",
+      "k1": 1.0,
+      "k2": 1.0,
+      "k3": 1.0,
+      "k4": 0.9333333333333333
+    },
+    {
+      "approach": "step",
+      "name": "пошаговые инструкции",
+      "k1": 1.0,
+      "k2": 1.0,
+      "k3": 1.0,
+      "k4": 0.9333333333333333
+    }
+  ],
+  "per_file": [
+    {
+      "file": "answers/ctx2_zero_r1.txt",
+      "k1": 1.0,
+      "k2": 1.0,
+      "k3": 1.0,
+      "parsed": true,
+      "n": 5,
+      "errors": []
+    },
+    {
+      "file": "answers/ctx2_zero_r2.txt",
+      "k1": 1.0,
+      "k2": 1.0,
+      "k3": 1.0,
+      "parsed": true,
+      "n": 5,
+      "errors": []
+    },
+    {
+      "file": "answers/ctx2_zero_r3.txt",
+      "k1": 1.0,
+      "k2": 1.0,
+      "k3": 1.0,
+      "parsed": true,
+      "n": 5,
+      "errors": []
+    },
+    {
+      "file": "answers/ctx2_few_r1.txt",
+      "k1": 1.0,
+      "k2": 1.0,
+      "k3": 1.0,
+      "parsed": true,
+      "n": 5,
+      "errors": []
+    },
+    {
+      "file": "answers/ctx2_few_r2.txt",
+      "k1": 1.0,
+      "k2": 1.0,
+      "k3": 1.0,
+      "parsed": true,
+      "n": 5,
+      "errors": []
+    },
+    {
+      "file": "answers/ctx2_few_r3.txt",
+      "k1": 1.0,
+      "k2": 1.0,
+      "k3": 1.0,
+      "parsed": true,
+      "n": 5,
+      "errors": []
+    },
+    {
+      "file": "answers/ctx2_step_r1.txt",
+      "k1": 1.0,
+      "k2": 1.0,
+      "k3": 1.0,
+      "parsed": true,
+      "n": 5,
+      "errors": []
+    },
+    {
+      "file": "answers/ctx2_step_r2.txt",
+      "k1": 1.0,
+      "k2": 1.0,
+      "k3": 1.0,
+      "parsed": true,
+      "n": 5,
+      "errors": []
+    },
+    {
+      "file": "answers/ctx2_step_r3.txt",
+      "k1": 1.0,
+      "k2": 1.0,
+      "k3": 1.0,
+      "parsed": true,
+      "n": 5,
+      "errors": []
+    }
+  ],
+  "error_demo": {
+    "file": "answers/ctx2_error_old_prompt.txt",
+    "k1": 0.4,
+    "k2": 1.0,
+    "k3": 1.0,
+    "errors": [
+      "объект 1: palette: 1–3 цвета из списка",
+      "объект 2: palette: 1–3 цвета из списка",
+      "объект 5: palette: 1–3 цвета из списка"
+    ],
+    "diagnosis": "the prompt had no closed colour list, so the check measures a rule that was not requested"
+  }
+}
