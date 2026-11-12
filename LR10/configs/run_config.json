@@ -1,0 +1,81 @@
+{
+  "variant": 7,
+  "brief_no": 2,
+  "pair_no": 1,
+  "brief_index_c": 1,
+  "pair_index_k": 0,
+  "brief": "square podcast cover about the city environment, abstract layered skyline of geometric shapes, teal and orange palette, minimal flat style, no text, no people",
+  "model_A": {
+    "key": "turbo",
+    "repo": "stabilityai/sd-turbo",
+    "revision": "b261bac6fd2cf515557d5d0707481eafa0485ec2",
+    "steps": 1,
+    "guidance": 0.0,
+    "size": 512
+  },
+  "model_B": {
+    "key": "lcm",
+    "repo": "SimianLuo/LCM_Dreamshaper_v7",
+    "revision": "a85df6a8bd976cdd08b4fd8f3b73f229c9e54df5",
+    "steps": 4,
+    "guidance": 8.0,
+    "size": 512
+  },
+  "clip_id": "openai/clip-vit-large-patch14",
+  "clip_revision": "32bd64288804d66eefd0ccbe215aa642df71cc41",
+  "text_probe": "written text and letters",
+  "seeds": [
+    101,
+    102,
+    103,
+    104,
+    105
+  ],
+  "dtype": "float32",
+  "device": "cpu",
+  "generator_device": "cpu",
+  "metrics": [
+    "clip_brief",
+    "clip_text",
+    "edge",
+    "contrast",
+    "seconds"
+  ],
+  "tolerance": {
+    "clip_brief": {
+      "kind": "abs",
+      "value": 1.0
+    },
+    "clip_text": {
+      "kind": "abs",
+      "value": 1.0
+    },
+    "edge": {
+      "kind": "rel",
+      "value": 0.1
+    },
+    "contrast": {
+      "kind": "rel",
+      "value": 0.1
+    },
+    "seconds": {
+      "kind": "ratio",
+      "value": 1.5
+    }
+  },
+  "significance_criterion": "abs(d) > 2 * s_A",
+  "calls": {
+    "variant": "L.variant_summary(7, save_dir=\"v07\")",
+    "blind": "L.blind_sheets(7, \"v07\")",
+    "error_2": "L.variant_summary(7, save_dir=\"v07_err\", cfg={\"lcm\": {\"steps\": 1}})",
+    "demo": "L.variant_summary(1, save_dir=\"v01\")"
+  },
+  "packages": {
+    "diffusers": "0.32.2",
+    "transformers": "<5"
+  },
+  "library_sha256": {
+    "lab10_lib.py": "b53293ebd2422295cfa2fd01e4dcc5f8eaef440c0802a80803d3771c19ce2f6c"
+  },
+  "hypothesis_recorded_at": "12.11.2026 11:24"
+}

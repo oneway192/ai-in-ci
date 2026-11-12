@@ -1,0 +1,23 @@
+STATUS=ACTUAL
+execution_environment=Google Colab
+device=cpu
+cuda_available=False
+cpu_count=2
+torch_threads=1
+ram_gb=12.7
+python=3.13.18
+torch=2.14.1+cpu
+diffusers=0.32.2
+transformers=4.57.6
+huggingface_hub=0.36.2
+numpy=2.4.6
+scipy=1.16.3
+pillow=11.3.0
+platform=Linux-6.6.159+-x86_64-with-glibc2.39
+environment_fix=torchao uninstalled before importing diffusers: not used by the library, breaks diffusers import in the Colab image
+environment_fix=pip install "diffusers==0.32.2" "transformers<5" (section 4 of the manual)
+model_turbo=stabilityai/sd-turbo@b261bac6fd2cf515557d5d0707481eafa0485ec2
+model_lcm=SimianLuo/LCM_Dreamshaper_v7@a85df6a8bd976cdd08b4fd8f3b73f229c9e54df5
+clip=openai/clip-vit-large-patch14@32bd64288804d66eefd0ccbe215aa642df71cc41
+lab10_lib.py_sha256=b53293ebd2422295cfa2fd01e4dcc5f8eaef440c0802a80803d3771c19ce2f6c
+started_at_utc=2026-11-12T08:43:29+00:00

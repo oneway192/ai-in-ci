@@ -1,0 +1,62 @@
+[
+  {
+    "metric": "clip_brief",
+    "change": 1.6830235719680786,
+    "change_kind": "abs",
+    "tolerance": 1.0,
+    "sig_2s": false,
+    "ratio_d_s": 0.9869701509245059,
+    "over_tolerance": true,
+    "class": "только практически важно",
+    "over_tolerance_x0.5": true,
+    "over_tolerance_x2": false
+  },
+  {
+    "metric": "clip_text",
+    "change": 0.47567397356033325,
+    "change_kind": "abs",
+    "tolerance": 1.0,
+    "sig_2s": false,
+    "ratio_d_s": 1.0628808978314854,
+    "over_tolerance": false,
+    "class": "ни то ни другое",
+    "over_tolerance_x0.5": false,
+    "over_tolerance_x2": false
+  },
+  {
+    "metric": "edge",
+    "change": -0.7795059107541658,
+    "change_kind": "rel",
+    "tolerance": 0.1,
+    "sig_2s": true,
+    "ratio_d_s": 3.5031899297970175,
+    "over_tolerance": true,
+    "class": "значимо и практически важно",
+    "over_tolerance_x0.5": true,
+    "over_tolerance_x2": true
+  },
+  {
+    "metric": "contrast",
+    "change": -0.25938619319066447,
+    "change_kind": "rel",
+    "tolerance": 0.1,
+    "sig_2s": true,
+    "ratio_d_s": 2.3547219513561197,
+    "over_tolerance": true,
+    "class": "значимо и практически важно",
+    "over_tolerance_x0.5": true,
+    "over_tolerance_x2": true
+  },
+  {
+    "metric": "seconds",
+    "change": 1.5879484227314986,
+    "change_kind": "ratio",
+    "tolerance": 1.5,
+    "sig_2s": true,
+    "ratio_d_s": 6.02422582375089,
+    "over_tolerance": true,
+    "class": "значимо и практически важно",
+    "over_tolerance_x0.5": true,
+    "over_tolerance_x2": false
+  }
+]

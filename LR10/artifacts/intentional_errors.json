@@ -1,0 +1,93 @@
+{
+  "error_1_one_seed": {
+    "description": "conclusion about clip_brief drawn from one seed only",
+    "by_seed": {
+      "101": {
+        "A": 31.753462553024292,
+        "B": 32.45067298412323,
+        "d": 0.697210431098938,
+        "abs_d_over_s": 0.4088628916843894
+      },
+      "102": {
+        "A": 31.045281887054443,
+        "B": 32.725030183792114,
+        "d": 1.679748296737671,
+        "abs_d_over_s": 0.9850494417066934
+      },
+      "103": {
+        "A": 28.23348641395569,
+        "B": 31.870990991592407,
+        "d": 3.6375045776367188,
+        "abs_d_over_s": 2.133130219786836
+      },
+      "104": {
+        "A": 30.877137184143066,
+        "B": 32.22317397594452,
+        "d": 1.3460367918014526,
+        "abs_d_over_s": 0.7893520671256615
+      },
+      "105": {
+        "A": 32.84526467323303,
+        "B": 33.899882435798645,
+        "d": 1.0546177625656128,
+        "abs_d_over_s": 0.6184561343189491
+      }
+    },
+    "s_A": 1.7052426260222477,
+    "d_mean": 1.6830235719680786,
+    "d_min": 0.697210431098938,
+    "seed_d_min": 101,
+    "d_max": 3.6375045776367188,
+    "seed_d_max": 103,
+    "seeds_B_higher": 5,
+    "seeds_with_abs_d_over_2s": [
+      103
+    ],
+    "fix": "five seeds, mean, s of model A and the 2s criterion (section 2.4)"
+  },
+  "error_2_lcm_1_step": {
+    "description": "LCM run with 1 step instead of 4 to 'equalize' it with SD Turbo",
+    "call": "L.variant_summary(7, save_dir=\"v07_err\", cfg={\"lcm\": {\"steps\": 1}})",
+    "lcm_4_steps": {
+      "clip_brief": 32.63395011425018,
+      "clip_text": 14.638608396053314,
+      "edge": 0.010771208359373459,
+      "contrast": 0.11737126206558797,
+      "seconds": 129.66531145800005
+    },
+    "lcm_1_step": {
+      "clip_brief": 28.5971462726593,
+      "clip_text": 15.830737054347992,
+      "edge": 0.005032045004314836,
+      "contrast": 0.07207123255567903,
+      "seconds": 81.4741463735999
+    },
+    "clip_brief_d_vs_turbo_1_step": -2.3537802696228027,
+    "clip_brief_ratio_1_step": 1.3803198639910692,
+    "clip_brief_sig_2s_1_step": false,
+    "seconds_ratio_1_step": 0.9756777452210442,
+    "seconds_ratio_4_steps": 1.5879484227314986,
+    "turbo_metrics_max_abs_diff_between_runs": 0.0,
+    "fix": "run every model in its configuration from table 2.2; the number of steps is a separate one-model experiment"
+  },
+  "error_3_time_from_different_runs": {
+    "description": "time ratio computed from different runs instead of one run",
+    "turbo_seconds_by_run": {
+      "v07": 81.65587093499998,
+      "v07_err": 83.50518065280002,
+      "v01": 77.93645286360007
+    },
+    "turbo_spread_between_runs_pct": 7.145215858035048,
+    "lcm_v07_seconds": 129.66531145800005,
+    "ratio_same_run": 1.5879484227314986,
+    "ratio_demo_same_run": 1.6878769301346863,
+    "ratio_cross_run": {
+      "lcm(v07) / turbo(v07_err)": 1.5527816411430304,
+      "lcm(v07) / turbo(v01)": 1.663731241206639
+    },
+    "ratio_cross_platform": {
+      "lcm(v07, this session) / turbo(Engee full run 17.22 s)": 7.529925171777006
+    },
+    "fix": "measure both models of the pair in one run (variant_summary does it) and report the ratio, not the difference in seconds"
+  }
+}

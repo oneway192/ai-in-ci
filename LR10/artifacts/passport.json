@@ -1,0 +1,233 @@
+{
+  "status": "COMPLETE",
+  "date_utc": "2026-11-12T10:01:19+00:00",
+  "variant": 7,
+  "brief_no": 2,
+  "pair_no": 1,
+  "brief": "square podcast cover about the city environment, abstract layered skyline of geometric shapes, teal and orange palette, minimal flat style, no text, no people",
+  "hypothesis_recorded_at": "12.11.2026 11:24",
+  "hypotheses": {
+    "H1": {
+      "text": "LCM clip_brief higher than SD Turbo by more than 2s and more than 1.0",
+      "confirmed": false
+    },
+    "H2": {
+      "text": "time ratio LCM / SD Turbo at least 1.5",
+      "confirmed": true
+    },
+    "H3": {
+      "text": "clip_text differs by no more than 1.0",
+      "confirmed": true
+    },
+    "H4": {
+      "text": "edge and contrast differ by no more than 10 % of A",
+      "confirmed": false
+    },
+    "H5": {
+      "text": "LCM chosen in at least 3 of 5 blind pairs",
+      "confirmed": true
+    },
+    "H6": {
+      "text": "horizon layers read as teal and orange bands on at least 3 of 5 seeds for each model",
+      "confirmed": false
+    }
+  },
+  "tolerance": {
+    "clip_brief": [
+      "abs",
+      1.0
+    ],
+    "clip_text": [
+      "abs",
+      1.0
+    ],
+    "edge": [
+      "rel",
+      0.1
+    ],
+    "contrast": [
+      "rel",
+      0.1
+    ],
+    "seconds": [
+      "ratio",
+      1.5
+    ]
+  },
+  "significance": "abs(d) > 2 * s_A, s over 5 seeds of model A",
+  "models": {
+    "turbo": {
+      "repo": "stabilityai/sd-turbo",
+      "revision": "b261bac6fd2cf515557d5d0707481eafa0485ec2",
+      "steps": 1,
+      "guidance": 0.0,
+      "size": 512,
+      "note": "дистиллированная SD 2.1, 1 шаг, без управления",
+      "scheduler": "from the repository (not replaced)",
+      "license": "Stability AI Community License (в метаданных HF не указана; условия по карточке модели)"
+    },
+    "lcm": {
+      "repo": "SimianLuo/LCM_Dreamshaper_v7",
+      "revision": "a85df6a8bd976cdd08b4fd8f3b73f229c9e54df5",
+      "steps": 4,
+      "guidance": 8.0,
+      "size": 512,
+      "note": "латентная согласованность, 4 шага",
+      "scheduler": "from the repository (not replaced)",
+      "license": "MIT"
+    }
+  },
+  "clip": {
+    "repo": "openai/clip-vit-large-patch14",
+    "revision": "32bd64288804d66eefd0ccbe215aa642df71cc41",
+    "text_probe": "written text and letters",
+    "license": "по карточке модели openai/clip-vit-large-patch14 (в метаданных HF не указана)"
+  },
+  "seeds": [
+    101,
+    102,
+    103,
+    104,
+    105
+  ],
+  "dtype": "float32",
+  "device": "cpu",
+  "generator": "torch.Generator('cpu')",
+  "threads": 1,
+  "environment": {
+    "execution_environment": "Google Colab",
+    "device": "cpu",
+    "cuda_available": false,
+    "cpu_count": 2,
+    "torch_threads": 1,
+    "ram_gb": 12.7,
+    "python": "3.13.18",
+    "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+    "packages": {
+      "torch": "2.14.1+cpu",
+      "diffusers": "0.32.2",
+      "transformers": "4.57.6",
+      "huggingface_hub": "0.36.2",
+      "numpy": "2.4.6",
+      "scipy": "1.16.3",
+      "pillow": "11.3.0"
+    },
+    "environment_fixes": [
+      "torchao uninstalled before importing diffusers: not used by the library, breaks diffusers import in the Colab image",
+      "pip install \"diffusers==0.32.2\" \"transformers<5\" (section 4 of the manual)"
+    ],
+    "library_sha256": {
+      "lab10_lib.py": "b53293ebd2422295cfa2fd01e4dcc5f8eaef440c0802a80803d3771c19ce2f6c"
+    },
+    "started_at_utc": "2026-11-12T08:43:29+00:00"
+  },
+  "runs": {
+    "v07": {
+      "call": "L.variant_summary(7, save_dir=\"v07\")",
+      "total_seconds": 1545.9,
+      "loads": [
+        {
+          "what": "clip",
+          "seconds": 35.4
+        },
+        {
+          "what": "turbo",
+          "seconds": 94.2
+        },
+        {
+          "what": "lcm",
+          "seconds": 45.4
+        }
+      ],
+      "peak_rss_gb": 7.45
+    },
+    "v07_err": {
+      "call": "L.variant_summary(7, save_dir=\"v07_err\", cfg={\"lcm\": {\"steps\": 1}})",
+      "total_seconds": 1067.6,
+      "loads": [
+        {
+          "what": "clip",
+          "seconds": 1.3
+        },
+        {
+          "what": "turbo",
+          "seconds": 2.1
+        },
+        {
+          "what": "lcm",
+          "seconds": 2.0
+        }
+      ],
+      "peak_rss_gb": 7.88
+    },
+    "v01": {
+      "call": "L.variant_summary(1, save_dir=\"v01\")",
+      "total_seconds": 1363.1,
+      "loads": [
+        {
+          "what": "clip",
+          "seconds": 1.5
+        },
+        {
+          "what": "turbo",
+          "seconds": 2.2
+        },
+        {
+          "what": "lcm",
+          "seconds": 1.9
+        }
+      ],
+      "peak_rss_gb": 7.9
+    }
+  },
+  "blind": {
+    "evaluator": "автор работы",
+    "recorded_at": "12.11.2026 12:57",
+    "wins_B": 3,
+    "p_two_sided": 1.0
+  },
+  "visual_check": {
+    "bands": {
+      "turbo": {
+        "101": false,
+        "102": false,
+        "103": false,
+        "104": false,
+        "105": false
+      },
+      "lcm": {
+        "101": false,
+        "102": true,
+        "103": true,
+        "104": true,
+        "105": true
+      }
+    },
+    "seed101": "A (SD Turbo): плотная мозаика из бирюзовых и оранжевых шестиугольных и угловатых плоскостей с вкраплениями почти фотографических небоскрёбов; цвета брифа есть, но единого горизонта и минимализма нет. B (LCM): мягкий, размытый горизонт бирюзовых башен в прямоугольной рамке на оранжевом фоне с треугольным холмом; палитра совпадает, композиция центрирована, но края смазаны и плоского геометрического стиля нет. Буквоподобных знаков и людей на обоих нет.",
+    "defects": "SD Turbo на всех пяти seed — перегруженная мозаика без читаемого горизонта; букв и людей нет. LCM на seed 102–105 — слоистый горизонт башен в бирюзово-оранжевой палитре, на seed 101 — размытый горизонт в рамке; на LCM seed 104 внизу слева буквоподобная надпись (текст запрещён брифом). Узнаваемых зданий и людей нет ни у одной модели; изображения синтетические и не выдаются за фотографию города.",
+    "lcm_1step": "LCM с одним шагом на всех пяти seed даёт размытые пятна: башни «плавают» и растворяются в бирюзово-оранжевом тумане, границ нет — как в разделе 6.4 методички; это следствие изменения конфигурации, а не свойство модели."
+  },
+  "timing": {
+    "A_seconds_per_image": 81.65587093499998,
+    "A_seconds_s": 7.969395890459455,
+    "B_seconds_per_image": 129.66531145800005,
+    "ratio_B_over_A": 1.5879484227314986,
+    "threads": 1,
+    "loads": [
+      {
+        "what": "clip",
+        "seconds": 35.4
+      },
+      {
+        "what": "turbo",
+        "seconds": 94.2
+      },
+      {
+        "what": "lcm",
+        "seconds": 45.4
+      }
+    ],
+    "note": "one run in one Colab CPU session; not comparable with Engee seconds"
+  },
+  "demo_all_within_2s": true
+}
