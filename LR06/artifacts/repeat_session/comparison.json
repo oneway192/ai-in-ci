@@ -1,0 +1,218 @@
+{
+  "description": "LR06 variant 7 repeated in a new Colab session on 18.11.2026; metrics recomputed from repeat_check.json (old value + difference)",
+  "environment_new": {
+    "execution_environment": "Google Colab",
+    "gpu": "Tesla T4",
+    "cuda_available": true,
+    "cuda_runtime": "13.0",
+    "python": "3.13.16",
+    "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+    "packages": {
+      "torch": "2.14.1+cu130",
+      "diffusers": "0.42.1",
+      "transformers": "5.22.1",
+      "pillow": "11.3.0",
+      "numpy": "2.4.6",
+      "scipy": "1.16.3"
+    },
+    "environment_fixes": [
+      "torchao uninstalled before importing diffusers: ImportError FqnToConfig from torchao.quantization"
+    ],
+    "started_at_utc": "2026-11-18T10:46:36.537171+00:00"
+  },
+  "environment_old": {
+    "execution_environment": "Google Colab",
+    "gpu": "Tesla T4",
+    "cuda_available": true,
+    "cuda_runtime": "13.0",
+    "python": "3.13.16",
+    "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+    "packages": {
+      "torch": "2.11.0+cu130",
+      "diffusers": "0.41.0",
+      "transformers": "5.20.2",
+      "pillow": "11.3.0",
+      "numpy": "2.1.3",
+      "scipy": "1.16.3"
+    },
+    "environment_fixes": [
+      "torchao uninstalled before importing diffusers: ImportError FqnToConfig from torchao.quantization"
+    ],
+    "started_at_utc": "2026-10-27T15:36:30.127299+00:00"
+  },
+  "images_bitwise_equal": false,
+  "per_seed_new": [
+    {
+      "mode": "A",
+      "seed": 101,
+      "clip": 32.10955858230591,
+      "edge": 0.03726867210917255,
+      "contrast": 0.19025394868206927,
+      "seconds": 0.27975509299994883
+    },
+    {
+      "mode": "A",
+      "seed": 102,
+      "clip": 34.32786166667938,
+      "edge": 0.03295262863971341,
+      "contrast": 0.16766655100722772,
+      "seconds": 0.2742392779999818
+    },
+    {
+      "mode": "A",
+      "seed": 103,
+      "clip": 34.23372209072113,
+      "edge": 0.06462320809461912,
+      "contrast": 0.16296335320346728,
+      "seconds": 0.2728363490000447
+    },
+    {
+      "mode": "A",
+      "seed": 104,
+      "clip": 37.963008880615234,
+      "edge": 0.039069848069360986,
+      "contrast": 0.1465714771260545,
+      "seconds": 0.2802214289999938
+    },
+    {
+      "mode": "A",
+      "seed": 105,
+      "clip": 33.98613929748535,
+      "edge": 0.03577882351303682,
+      "contrast": 0.1749570269433693,
+      "seconds": 0.2765693789999659
+    },
+    {
+      "mode": "B",
+      "seed": 101,
+      "clip": 33.82747769355774,
+      "edge": 0.04745412462918597,
+      "contrast": 0.24760559136230115,
+      "seconds": 0.5079615329999569
+    },
+    {
+      "mode": "B",
+      "seed": 102,
+      "clip": 33.94013047218323,
+      "edge": 0.05064398334446032,
+      "contrast": 0.24473818893163996,
+      "seconds": 0.5107274770000458
+    },
+    {
+      "mode": "B",
+      "seed": 103,
+      "clip": 32.362568378448486,
+      "edge": 0.12772089003904508,
+      "contrast": 0.3238133080512927,
+      "seconds": 0.5102365440000085
+    },
+    {
+      "mode": "B",
+      "seed": 104,
+      "clip": 34.91883873939514,
+      "edge": 0.07677516125106562,
+      "contrast": 0.2407469138790205,
+      "seconds": 0.5121699989999797
+    },
+    {
+      "mode": "B",
+      "seed": 105,
+      "clip": 31.88575506210327,
+      "edge": 0.05826153681135312,
+      "contrast": 0.24941714264705864,
+      "seconds": 0.5128093910000189
+    }
+  ],
+  "rows": [
+    {
+      "metric": "clip",
+      "A_new": 34.5240581035614,
+      "s_new": 2.1253432116525106,
+      "B_new": 33.38695406913757,
+      "d_new": -1.1371040344238281,
+      "ratio_new": 0.5350213688732652,
+      "sig_2s_new": false,
+      "change_new": -1.1371040344238281,
+      "class_new": "ухудшение",
+      "A_old": 34.09651756286621,
+      "B_old": 32.65207827091217,
+      "d_old": -1.4444392919540405,
+      "ratio_old": 0.7892809212662263,
+      "sig_2s_old": false,
+      "change_old": -1.4444392919540405,
+      "class_old": "ухудшение",
+      "class_same": true,
+      "seeds_B_gt_A_new": 1
+    },
+    {
+      "metric": "edge",
+      "A_new": 0.04193863608518058,
+      "s_new": 0.01287749913805333,
+      "B_new": 0.07217113921502202,
+      "d_new": 0.030232503129841444,
+      "ratio_new": 2.3476998760189116,
+      "sig_2s_new": true,
+      "change_new": 0.7208747339431095,
+      "class_new": "ухудшение",
+      "A_old": 0.04166556667804523,
+      "B_old": 0.06534845860925367,
+      "d_old": 0.02368289193120844,
+      "ratio_old": 1.8729370917744077,
+      "sig_2s_old": false,
+      "change_old": 0.5684044120702582,
+      "class_old": "ухудшение",
+      "class_same": true,
+      "seeds_B_gt_A_new": 5
+    },
+    {
+      "metric": "contrast",
+      "A_new": 0.1684824713924376,
+      "s_new": 0.01602447467434849,
+      "B_new": 0.2612642289742626,
+      "d_new": 0.092781757581825,
+      "ratio_new": 5.790003071386004,
+      "sig_2s_new": true,
+      "change_new": 0.550690863061435,
+      "class_new": "улучшение",
+      "A_old": 0.1673208147873187,
+      "B_old": 0.24628299468556542,
+      "d_old": 0.07896217989824672,
+      "ratio_old": 4.981637761611835,
+      "sig_2s_old": true,
+      "change_old": 0.471920842595797,
+      "class_old": "улучшение",
+      "class_same": true,
+      "seeds_B_gt_A_new": 5
+    },
+    {
+      "metric": "seconds",
+      "A_new": 0.276724305599987,
+      "s_new": 0.003268452052801863,
+      "B_new": 0.510780988800002,
+      "d_new": 0.234056683200015,
+      "ratio_new": 71.61086637308054,
+      "sig_2s_new": true,
+      "change_new": 0.8458118006386859,
+      "class_new": "ухудшение",
+      "A_old": 0.32896186760001456,
+      "B_old": 0.5894473083999856,
+      "d_old": 0.26048544079997105,
+      "ratio_old": 16.921211208896576,
+      "sig_2s_old": true,
+      "change_old": 0.7918408376641874,
+      "class_old": "ухудшение",
+      "class_same": true,
+      "seeds_B_gt_A_new": 5
+    }
+  ],
+  "pays_off_new": false,
+  "intentional_error_new": {
+    "psnr_guidance_3_vs_0_db": 12.248823200216085,
+    "sha_equal_to_old": [
+      false,
+      false,
+      false
+    ],
+    "guidance_1_equals_0_bitwise": "checked by the notebook's final checklist cell (assert passed, the next cell ran)"
+  }
+}

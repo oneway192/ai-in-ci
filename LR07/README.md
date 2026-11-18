@@ -53,6 +53,7 @@
 | [artifacts/intentional_error.json](artifacts/intentional_error.json) | намеренная ошибка: PSNR без эталона |
 | [artifacts/demo/](artifacts/demo/) | воспроизведение демо-варианта: вывод, сверка с методичкой, лист сравнения |
 | [artifacts/passport.json](artifacts/passport.json) | паспорт эксперимента со статусом `COMPLETE` |
+| [artifacts/repeat_session/](artifacts/repeat_session/) | повтор в новом сеансе Colab 18.11.2026: артефакты прогона и сверка с исходным |
 | [reports/report.md](reports/report.md) | полный отчёт; [PDF](reports/report.pdf) и [DOCX](reports/report.docx) — для сдачи |
 | [reports/journal.md](reports/journal.md) | журнал: гипотеза до запуска, прогон, результаты |
 | [reports/environment.txt](reports/environment.txt) | фактическая среда |

@@ -1,0 +1,297 @@
+{
+  "status": "COMPLETE",
+  "variant": 7,
+  "dataset": "disc_rect",
+  "dataset_factors": 4,
+  "factor": "latent_8_to_2",
+  "seeds": [
+    101,
+    102,
+    103,
+    104,
+    105
+  ],
+  "hypothesis_recorded_at": "27.10.2026 19:05",
+  "hypothesis": "d = 2 instead of 8 lowers test PSNR by more than 1 dB (more than the 3-factor demo), gap changes within ±0.1 dB, time within ±20 %; both modes beat the mean-image baseline",
+  "tolerance": {
+    "psnr": {
+      "kind": "abs",
+      "value": 1.0
+    },
+    "gap": {
+      "kind": "abs",
+      "value": 0.1
+    },
+    "seconds": {
+      "kind": "rel",
+      "value": 0.2
+    }
+  },
+  "direction": {
+    "psnr": "increase_is_improvement",
+    "gap": "increase_is_deterioration",
+    "seconds": "increase_is_deterioration"
+  },
+  "model": {
+    "library": "lab07_lib.ConvAE",
+    "optimizer": "Adam",
+    "lr": 0.002,
+    "batch": 128,
+    "epochs": 20
+  },
+  "data": {
+    "generator": "lab07_lib.render",
+    "data_seed": 7,
+    "n_train": 4096,
+    "n_test": 1024,
+    "image": "3x32x32"
+  },
+  "mode_a": {
+    "arch": "conv",
+    "d": 8,
+    "loss": "mse",
+    "noise": 0.0,
+    "eval_noise": 0.0,
+    "n_train": 4096,
+    "epochs": 20
+  },
+  "mode_b": {
+    "arch": "conv",
+    "d": 2,
+    "loss": "mse",
+    "noise": 0.0,
+    "eval_noise": 0.0,
+    "n_train": 4096,
+    "epochs": 20
+  },
+  "changed_fields": [
+    "d"
+  ],
+  "environment": {
+    "execution_environment": "Google Colab",
+    "gpu": "Tesla T4",
+    "cuda_available": true,
+    "cuda_runtime": "13.0",
+    "python": "3.13.16",
+    "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+    "packages": {
+      "torch": "2.14.1+cu130",
+      "numpy": "2.4.6",
+      "pillow": "11.3.0"
+    },
+    "started_at_utc": "2026-11-18T10:46:32.918451+00:00"
+  },
+  "library_sha256": {
+    "lab07_lib.py": "d84b83a878f55e95289d76a788dc9fa84d3249d0d33aa719d9db8d6792fd2698",
+    "lab07_demo.py": "fce7924908adbef63dd5808a800a3c9f5b96c137dc9ebf9d398fc2eb613d95fa"
+  },
+  "timings_seconds": {
+    "demo_total": 81.68,
+    "variant_summary": 25.38
+  },
+  "metrics": [
+    {
+      "metric": "psnr",
+      "A": 26.191380310058594,
+      "s": 0.6981169823562968,
+      "B": 20.58872413635254,
+      "d": -5.602656173706055,
+      "ratio": 8.025383016462184,
+      "sig_2s": true
+    },
+    {
+      "metric": "gap",
+      "A": 0.045281982421875,
+      "s": 0.01486799310922998,
+      "B": -0.00012664794921875,
+      "d": -0.04540863037109375,
+      "ratio": 3.0541196809476787,
+      "sig_2s": true
+    },
+    {
+      "metric": "params",
+      "A": 101.035,
+      "s": 0.0,
+      "B": 88.741,
+      "d": -12.293999999999997,
+      "ratio": "inf",
+      "sig_2s": true
+    },
+    {
+      "metric": "seconds",
+      "A": 2.253687686599983,
+      "s": 0.13337025449638445,
+      "B": 2.3054853440000214,
+      "d": 0.0517976574000385,
+      "ratio": 0.388374886106577,
+      "sig_2s": false
+    }
+  ],
+  "classification": [
+    {
+      "metric": "psnr",
+      "change": -5.602656173706055,
+      "change_kind": "abs",
+      "tolerance": 1.0,
+      "class": "ухудшение",
+      "sig_2s": true,
+      "2s_and_tolerance_agree": true,
+      "class_tolerance_x0_5": "ухудшение",
+      "class_tolerance_x2": "ухудшение"
+    },
+    {
+      "metric": "gap",
+      "change": -0.04540863037109375,
+      "change_kind": "abs",
+      "tolerance": 0.1,
+      "class": "нейтрально",
+      "sig_2s": true,
+      "2s_and_tolerance_agree": false,
+      "class_tolerance_x0_5": "нейтрально",
+      "class_tolerance_x2": "нейтрально"
+    },
+    {
+      "metric": "seconds",
+      "change": 0.022983511738568725,
+      "change_kind": "rel",
+      "tolerance": 0.2,
+      "class": "нейтрально",
+      "sig_2s": false,
+      "2s_and_tolerance_agree": true,
+      "class_tolerance_x0_5": "нейтрально",
+      "class_tolerance_x2": "нейтрально"
+    }
+  ],
+  "params_change": {
+    "A_thousand": 101.035,
+    "B_thousand": 88.741,
+    "relative": -0.12168060573068736
+  },
+  "baseline": {
+    "dataset": "disc_rect",
+    "baseline_psnr": 16.892166137695312,
+    "gain_a_db": 9.299214172363282,
+    "gain_b_db": 3.6965579986572266
+  },
+  "latent_sweep_mean_psnr": {
+    "1": 19.417787551879883,
+    "2": 20.60499318440755,
+    "3": 22.077613194783527,
+    "4": 23.04040781656901,
+    "8": 26.003124872843426
+  },
+  "comparison_sheet_psnr": {
+    "A": 25.745018005371094,
+    "B": 20.55726432800293
+  },
+  "visual_check": {
+    "a_disc_and_stripe_restored": true,
+    "b_disc_and_stripe_restored": false,
+    "b_lost_factors": [
+      "полоса x",
+      "радиус"
+    ],
+    "notes": "A: диск и полоса восстановлены во всех 8 сценах на своих местах, маленький диск сцены 5 остаётся маленьким; края размыты, внутри диска слабые тёмные артефакты. B: диск — размытое пятно примерно на своём месте, но почти одного размера во всех сценах (радиус не передаётся); полоса превратилась в бледную ленту через всю нижнюю часть кадра — её положение потеряно."
+  },
+  "demo_reproduction": {
+    "rows": [
+      {
+        "metric": "psnr",
+        "A": 26.13936767578125,
+        "s": 0.7026473526535907,
+        "B": 23.221055221557616,
+        "d": -2.918312454223635,
+        "ratio": 4.153310253290573,
+        "sig_2s": true,
+        "A_ref": 26.0,
+        "s_ref": 0.71,
+        "B_ref": 23.2,
+        "d_ref": -2.8,
+        "A_within_2s_ref": true,
+        "B_within_2s_ref": true
+      },
+      {
+        "metric": "gap",
+        "A": 0.040389633178710936,
+        "s": 0.010681177496880478,
+        "B": 0.09843254089355469,
+        "d": 0.05804290771484375,
+        "ratio": 5.434130060266824,
+        "sig_2s": true,
+        "A_ref": 0.04,
+        "s_ref": 0.013,
+        "B_ref": 0.101,
+        "d_ref": 0.061,
+        "A_within_2s_ref": true,
+        "B_within_2s_ref": true
+      },
+      {
+        "metric": "params",
+        "A": 101.035,
+        "s": 0.0,
+        "B": 88.741,
+        "d": -12.293999999999997,
+        "ratio": "inf",
+        "sig_2s": true,
+        "A_ref": 101.0,
+        "s_ref": 0.0,
+        "B_ref": 88.7,
+        "d_ref": -12.3,
+        "A_within_2s_ref": true,
+        "B_within_2s_ref": true
+      },
+      {
+        "metric": "seconds",
+        "A": 2.3814035240000067,
+        "s": 0.35141812021914975,
+        "B": 2.1895371807999937,
+        "d": -0.19186634320001295,
+        "ratio": 0.5459773761249481,
+        "sig_2s": false,
+        "A_ref": 2.27,
+        "s_ref": 0.28,
+        "B_ref": 2.1,
+        "d_ref": -0.17,
+        "A_within_2s_ref": false,
+        "B_within_2s_ref": false
+      }
+    ],
+    "baseline_psnr": 17.171,
+    "sweep": {
+      "1": 20.63,
+      "2": 23.13,
+      "3": 25.24,
+      "4": 26.23,
+      "8": 25.78
+    }
+  },
+  "intentional_error": {
+    "symptom": "PSNR of mode B (d = 2) looks high in absolute terms, so two latent numbers seem enough",
+    "psnr_b": 20.58872413635254,
+    "psnr_a": 26.191380310058594,
+    "baseline_psnr": 16.892166137695312,
+    "gain_b_db": 3.6965579986572266,
+    "gain_a_db": 9.299214172363282,
+    "share_of_a_gain_kept_by_b": 0.39751294358217704,
+    "sweep_mean_psnr": {
+      "1": 19.417787551879883,
+      "2": 20.60499318440755,
+      "3": 22.077613194783527,
+      "4": 23.04040781656901,
+      "8": 26.003124872843426
+    },
+    "sweep_best_d": 8,
+    "scene_factors": 4,
+    "diagnosis": "PSNR is meaningful only relative to the mean-image baseline; d below the number of scene factors loses information by construction",
+    "fix": "report the gain over the baseline and choose d by a sweep, evaluated on the test set"
+  },
+  "limitations": [
+    "synthetic 32x32 scenes with a smooth background; conclusions do not transfer to photographs without checking",
+    "one architecture, one dataset, one factor, five seeds",
+    "GPU training is not bitwise deterministic; values reproduce within the between-seed spread",
+    "PSNR does not separate blur from object displacement",
+    "training time depends on GPU state"
+  ],
+  "license": "synthetic data generated by lab07_lib.py; no external data or pretrained weights",
+  "executed_at_utc": "2026-11-18T10:49:00.024695+00:00"
+}

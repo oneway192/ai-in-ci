@@ -53,6 +53,7 @@
 | [artifacts/intentional_error.json](artifacts/intentional_error.json) | намеренная ошибка с `guidance_scale = 1.0` |
 | [artifacts/demo/demo_variant01.json](artifacts/demo/demo_variant01.json) | воспроизведение демо-варианта и сверка с методичкой |
 | [artifacts/passport.json](artifacts/passport.json) | паспорт эксперимента со статусом `COMPLETE` |
+| [artifacts/repeat_session/](artifacts/repeat_session/) | повтор в новом сеансе Colab 18.11.2026: сверка по seed, пересчёт классов, изображения намеренной ошибки |
 | [reports/report.md](reports/report.md) | полный отчёт; [PDF](reports/report.pdf) и [DOCX](reports/report.docx) — для сдачи |
 | [reports/journal.md](reports/journal.md) | журнал: гипотеза до запуска, прогоны, результаты |
 | [reports/environment.txt](reports/environment.txt) | фактическая среда |

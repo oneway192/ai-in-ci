@@ -1,0 +1,137 @@
+{
+  "environment": {
+    "execution_environment": "Google Colab",
+    "gpu": "Tesla T4",
+    "cuda_available": true,
+    "cuda_runtime": "13.0",
+    "python": "3.13.16",
+    "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+    "packages": {
+      "torch": "2.14.1+cu130",
+      "diffusers": "0.42.1",
+      "transformers": "5.22.1",
+      "pillow": "11.3.0",
+      "numpy": "2.4.6",
+      "scipy": "1.16.3"
+    },
+    "environment_fixes": [
+      "torchao uninstalled before importing diffusers: ImportError FqnToConfig from torchao.quantization"
+    ],
+    "started_at_utc": "2026-11-18T10:46:36.537171+00:00"
+  },
+  "all_sha_equal": false,
+  "max_abs_diff": {
+    "clip": 4.76260781288147,
+    "edge": 0.047013597980619576,
+    "contrast": 0.06425298865206777
+  },
+  "per_seed": [
+    {
+      "mode": "A",
+      "seed": 101,
+      "sha_equal": false,
+      "d_clip": -3.0678093433380127,
+      "d_edge": -0.00966529494967995,
+      "d_contrast": 0.029541064858066235,
+      "seconds_old": 0.3670695230000547,
+      "seconds_new": 0.27975509299994883
+    },
+    {
+      "mode": "B",
+      "seed": 101,
+      "sha_equal": false,
+      "d_clip": 1.2160897254943848,
+      "d_edge": -0.02354566412895108,
+      "d_contrast": 0.004436521103077878,
+      "seconds_old": 0.6782653720000553,
+      "seconds_new": 0.5079615329999569
+    },
+    {
+      "mode": "A",
+      "seed": 102,
+      "sha_equal": false,
+      "d_clip": 2.9565602540969813,
+      "d_edge": -0.013112215965223287,
+      "d_contrast": 0.00542875378251606,
+      "seconds_old": 0.4846416420000423,
+      "seconds_new": 0.2742392779999818
+    },
+    {
+      "mode": "B",
+      "seed": 102,
+      "sha_equal": false,
+      "d_clip": 1.4657855033874512,
+      "d_edge": -0.032064371027905,
+      "d_contrast": -0.029444755110778265,
+      "seconds_old": 0.7031531679999716,
+      "seconds_new": 0.5107274770000458
+    },
+    {
+      "mode": "A",
+      "seed": 103,
+      "sha_equal": false,
+      "d_clip": -0.5119353532791138,
+      "d_edge": 0.009339924294942278,
+      "d_contrast": -0.032401532860579646,
+      "seconds_old": 0.334523274999924,
+      "seconds_new": 0.2728363490000447
+    },
+    {
+      "mode": "B",
+      "seed": 103,
+      "sha_equal": false,
+      "d_clip": -1.1412739753723145,
+      "d_edge": 0.047013597980619576,
+      "d_contrast": 0.049692499777165555,
+      "seconds_old": 0.5925649659999408,
+      "seconds_new": 0.5102365440000085
+    },
+    {
+      "mode": "A",
+      "seed": 104,
+      "sha_equal": false,
+      "d_clip": 4.76260781288147,
+      "d_edge": 0.0008036212664380774,
+      "d_contrast": -0.015337548620570324,
+      "seconds_old": 0.3204479029999447,
+      "seconds_new": 0.2802214289999938
+    },
+    {
+      "mode": "B",
+      "seed": 104,
+      "sha_equal": false,
+      "d_clip": 2.951723337173462,
+      "d_edge": 0.009768172034725825,
+      "d_contrast": -0.014031082978047033,
+      "seconds_old": 0.5805403040000101,
+      "seconds_new": 0.5121699989999797
+    },
+    {
+      "mode": "A",
+      "seed": 105,
+      "sha_equal": false,
+      "d_clip": -2.001720666885376,
+      "d_edge": 0.013999312389199624,
+      "d_contrast": 0.018577545866162254,
+      "seconds_old": 0.3252472819999639,
+      "seconds_new": 0.2765693789999659
+    },
+    {
+      "mode": "B",
+      "seed": 105,
+      "sha_equal": false,
+      "d_clip": -0.8179455995559692,
+      "d_edge": 0.03294166817035242,
+      "d_contrast": 0.06425298865206777,
+      "seconds_old": 0.5799835569999914,
+      "seconds_new": 0.5128093910000189
+    }
+  ],
+  "error_sha_equal": [
+    false,
+    false,
+    false
+  ],
+  "error_psnr_new": 12.248823200216085,
+  "error_psnr_old": 10.885461404351936
+}
