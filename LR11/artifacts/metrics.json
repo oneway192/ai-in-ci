@@ -1,0 +1,46 @@
+[
+  {
+    "metric": "nn_psnr",
+    "A": 19.322433853149413,
+    "s_A": 0.488331828771174,
+    "B": 19.325261688232423,
+    "delta": 0.0028278350830106547,
+    "abs_delta_over_s": 0.005790806407451565,
+    "exceeds_2s": false,
+    "tolerance": 0.5,
+    "exceeds_tolerance": false
+  },
+  {
+    "metric": "coverage",
+    "A": 0.8984375,
+    "s_A": 0.10414937193667895,
+    "B": 0.897265625,
+    "delta": -0.0011718750000000444,
+    "abs_delta_over_s": 0.011251868141005445,
+    "exceeds_2s": false,
+    "tolerance": 0.1,
+    "exceeds_tolerance": false
+  },
+  {
+    "metric": "diversity",
+    "A": 0.9498704671859741,
+    "s_A": 0.012081095788441354,
+    "B": 0.9543353080749511,
+    "delta": 0.004464840888977029,
+    "abs_delta_over_s": 0.3695725095772179,
+    "exceeds_2s": false,
+    "tolerance": 0.05,
+    "exceeds_tolerance": false
+  },
+  {
+    "metric": "seconds",
+    "A": 177.37191672859996,
+    "s_A": 5.46654815095897,
+    "B": 174.1285554943998,
+    "delta": -3.243361234200165,
+    "abs_delta_over_s": 0.5933106495423804,
+    "exceeds_2s": false,
+    "tolerance": null,
+    "exceeds_tolerance": null
+  }
+]

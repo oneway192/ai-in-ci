@@ -1,0 +1,32 @@
+{
+  "nn_psnr": {
+    "A": {
+      "delta": 0.07243385314941264,
+      "within_2s": true
+    },
+    "B": {
+      "delta": 0.09526168823242287,
+      "within_2s": true
+    }
+  },
+  "coverage": {
+    "A": {
+      "delta": 0.016437499999999994,
+      "within_2s": true
+    },
+    "B": {
+      "delta": 0.025265624999999958,
+      "within_2s": true
+    }
+  },
+  "diversity": {
+    "A": {
+      "delta": -0.0001295328140258345,
+      "within_2s": true
+    },
+    "B": {
+      "delta": 0.0023353080749511923,
+      "within_2s": true
+    }
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "archive_sha256": "949cd6c6c5b7eb5925a9ab94033e85cbcf14ea99ad7e47e8d11def5ad0e57e10",
+  "environment": {
+    "runtime": "Google Colab CPU",
+    "colab_release_tag": "release-colab-external-images_20261118-060058_RC00",
+    "python": "3.13.18",
+    "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+    "torch": "2.14.1+cpu",
+    "torch_cuda_build": null,
+    "numpy": "2.4.6",
+    "pillow": "11.3.0",
+    "matplotlib": "3.10.0",
+    "device": "cpu",
+    "available_cpus": 2,
+    "torch_threads": 4,
+    "torch_interop_threads": 1,
+    "sources_sha256": {
+      "lab07_lib.py": "d84b83a878f55e95289d76a788dc9fa84d3249d0d33aa719d9db8d6792fd2698",
+      "lab11_experiment.py": "b35a5ca45af27f522c440cf8f5e8ca6c64af78815d39c9bf94e441e3bc61ef9a",
+      "lab11_lib.py": "88b6083ffa28bd26ce2c6f4e9c142babae7398eb89185636aaa3207dfe7f396b"
+    }
+  },
+  "metrics": [
+    {
+      "metric": "nn_psnr",
+      "A": 19.322433853149413,
+      "s_A": 0.488331828771174,
+      "B": 19.325261688232423,
+      "delta": 0.0028278350830106547,
+      "abs_delta_over_s": 0.005790806407451565,
+      "exceeds_2s": false,
+      "tolerance": 0.5,
+      "exceeds_tolerance": false
+    },
+    {
+      "metric": "coverage",
+      "A": 0.8984375,
+      "s_A": 0.10414937193667895,
+      "B": 0.897265625,
+      "delta": -0.0011718750000000444,
+      "abs_delta_over_s": 0.011251868141005445,
+      "exceeds_2s": false,
+      "tolerance": 0.1,
+      "exceeds_tolerance": false
+    },
+    {
+      "metric": "diversity",
+      "A": 0.9498704671859741,
+      "s_A": 0.012081095788441354,
+      "B": 0.9543353080749511,
+      "delta": 0.004464840888977029,
+      "abs_delta_over_s": 0.3695725095772179,
+      "exceeds_2s": false,
+      "tolerance": 0.05,
+      "exceeds_tolerance": false
+    },
+    {
+      "metric": "seconds",
+      "A": 203.11573433059996,
+      "s_A": 7.190065128548236,
+      "B": 199.06649243039993,
+      "delta": -4.04924190020003,
+      "abs_delta_over_s": 0.563171797168077,
+      "exceeds_2s": false,
+      "tolerance": null,
+      "exceeds_tolerance": null
+    }
+  ],
+  "comparison": {
+    "nn_psnr": {
+      "practical_tolerance": 0.5,
+      "first_delta": 0.0028278350830106547,
+      "repeat_delta": 0.0028278350830106547,
+      "same_2s": true,
+      "same_practical": true,
+      "modes": {
+        "A": {
+          "first": 19.322433853149413,
+          "repeat": 19.322433853149413,
+          "difference": 0.0,
+          "within_2s": true
+        },
+        "B": {
+          "first": 19.325261688232423,
+          "repeat": 19.325261688232423,
+          "difference": 0.0,
+          "within_2s": true
+        }
+      },
+      "max_seed_difference": 0.0
+    },
+    "coverage": {
+      "practical_tolerance": 0.1,
+      "first_delta": -0.0011718750000000444,
+      "repeat_delta": -0.0011718750000000444,
+      "same_2s": true,
+      "same_practical": true,
+      "modes": {
+        "A": {
+          "first": 0.8984375,
+          "repeat": 0.8984375,
+          "difference": 0.0,
+          "within_2s": true
+        },
+        "B": {
+          "first": 0.897265625,
+          "repeat": 0.897265625,
+          "difference": 0.0,
+          "within_2s": true
+        }
+      },
+      "max_seed_difference": 0.0
+    },
+    "diversity": {
+      "practical_tolerance": 0.05,
+      "first_delta": 0.004464840888977029,
+      "repeat_delta": 0.004464840888977029,
+      "same_2s": true,
+      "same_practical": true,
+      "modes": {
+        "A": {
+          "first": 0.9498704671859741,
+          "repeat": 0.9498704671859741,
+          "difference": 0.0,
+          "within_2s": true
+        },
+        "B": {
+          "first": 0.9543353080749511,
+          "repeat": 0.9543353080749511,
+          "difference": 0.0,
+          "within_2s": true
+        }
+      },
+      "max_seed_difference": 0.0
+    }
+  },
+  "files": 37,
+  "started_at": "2026-11-26T11:18:30.262904+00:00",
+  "finished_at": "2026-11-26T11:58:55.781271+00:00"
+}

@@ -1,0 +1,114 @@
+{
+  "settings": {
+    "variant": 7,
+    "demo_variant": 1,
+    "environment": "Google Colab CPU",
+    "threads": 4,
+    "seeds": [
+      101,
+      102,
+      103,
+      104,
+      105
+    ],
+    "snapshots": [
+      100,
+      300,
+      700,
+      1500
+    ],
+    "sample_seed": 7,
+    "samples_per_mode": 32,
+    "hypothesis_recorded_at": "2026-11-25T23:30:00+03:00",
+    "tolerances": {
+      "nn_psnr": 0.5,
+      "coverage": 0.1,
+      "diversity": 0.05
+    },
+    "engee_reference": {
+      "nn_psnr": {
+        "A": 19.25,
+        "s_A": 0.48,
+        "B": 19.23
+      },
+      "coverage": {
+        "A": 0.882,
+        "s_A": 0.103,
+        "B": 0.872
+      },
+      "diversity": {
+        "A": 0.95,
+        "s_A": 0.009,
+        "B": 0.952
+      }
+    }
+  },
+  "kind": "disc_rect",
+  "configs": {
+    "A": {
+      "z": 32,
+      "gw": 1.0,
+      "bn": true,
+      "lr_g": 0.0002,
+      "lr_d": 0.0002,
+      "beta1": 0.5,
+      "loss": "nonsat",
+      "steps": 1500,
+      "batch": 64,
+      "n_critic": 1,
+      "smooth": 1.0,
+      "noise": 0.0,
+      "sn": false,
+      "gp": 10.0,
+      "drop": 0.0,
+      "n_train": 4096
+    },
+    "B": {
+      "z": 8,
+      "gw": 1.0,
+      "bn": true,
+      "lr_g": 0.0002,
+      "lr_d": 0.0002,
+      "beta1": 0.5,
+      "loss": "nonsat",
+      "steps": 1500,
+      "batch": 64,
+      "n_critic": 1,
+      "smooth": 1.0,
+      "noise": 0.0,
+      "sn": false,
+      "gp": 10.0,
+      "drop": 0.0,
+      "n_train": 4096
+    }
+  },
+  "environment": {
+    "runtime": "Google Colab CPU",
+    "colab_release_tag": "release-colab-external-images_20261118-060058_RC00",
+    "python": "3.13.18",
+    "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+    "torch": "2.14.1+cpu",
+    "torch_cuda_build": null,
+    "numpy": "2.4.6",
+    "pillow": "11.3.0",
+    "matplotlib": "3.10.0",
+    "device": "cpu",
+    "available_cpus": 2,
+    "torch_threads": 4,
+    "torch_interop_threads": 1,
+    "sources_sha256": {
+      "lab07_lib.py": "d84b83a878f55e95289d76a788dc9fa84d3249d0d33aa719d9db8d6792fd2698",
+      "lab11_experiment.py": "b35a5ca45af27f522c440cf8f5e8ca6c64af78815d39c9bf94e441e3bc61ef9a",
+      "lab11_lib.py": "88b6083ffa28bd26ce2c6f4e9c142babae7398eb89185636aaa3207dfe7f396b"
+    }
+  },
+  "demo": true,
+  "dataset_seed": 7,
+  "n_eval": 1024,
+  "coverage_k": 20,
+  "finished_at": "2026-11-26T11:58:55.781271+00:00",
+  "trainings_variant": 10,
+  "trainings_demo": 2,
+  "status": "COMPLETE",
+  "visual_reviewed_at": "2026-11-26T12:00:12.322382+00:00"
+}

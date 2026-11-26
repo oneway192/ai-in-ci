@@ -1,0 +1,17 @@
+{
+  "variant": 7,
+  "demo_variant": 1,
+  "environment": "Google Colab CPU",
+  "threads": 4,
+  "seeds": [101, 102, 103, 104, 105],
+  "snapshots": [100, 300, 700, 1500],
+  "sample_seed": 7,
+  "samples_per_mode": 32,
+  "hypothesis_recorded_at": "2026-11-25T23:30:00+03:00",
+  "tolerances": {"nn_psnr": 0.5, "coverage": 0.10, "diversity": 0.05},
+  "engee_reference": {
+    "nn_psnr": {"A": 19.25, "s_A": 0.48, "B": 19.23},
+    "coverage": {"A": 0.882, "s_A": 0.103, "B": 0.872},
+    "diversity": {"A": 0.950, "s_A": 0.009, "B": 0.952}
+  }
+}
